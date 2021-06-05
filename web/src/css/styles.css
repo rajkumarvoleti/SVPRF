@@ -172,8 +172,25 @@ h6 {
 
 body {
   margin: 0;
-  font-size: 10rem;
 }
 
 /* Start */
+.Navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.Navbar .Brand {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.Navbar .links {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 /*# sourceMappingURL=styles.css.map */

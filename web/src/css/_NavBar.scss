@@ -1,0 +1,10 @@
+.Navbar{
+  display: flex;
+  padding: 20px;
+  .Brand {
+    flex: 5;
+  }
+  .links {
+    flex: 1;
+  }
+}
