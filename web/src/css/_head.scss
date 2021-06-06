@@ -1,0 +1,25 @@
+@import "./variables";
+
+.head{
+  position: absolute;
+  z-index: 2;
+  top: 30vh;
+  left: 10vh;
+  width: 40%;
+  h1{
+    line-height: 1.2;
+    color: $orange;
+    font-weight: 800;
+    text-shadow: 0px 0px 5px $black;
+    font-size: 8vh;
+    font-family: $serif;
+  }
+  .btn{
+    margin: 20px 0;
+    border: 1px solid $black;
+    background-color: $orange;
+  }
+  .btn:hover{
+    background-color: $dark-orange;
+  }
+}

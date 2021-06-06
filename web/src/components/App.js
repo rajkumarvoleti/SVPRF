@@ -1,8 +1,22 @@
 import React from "react";
 import NavBar from "./NavBar";
+import Slides from "./Slides";
+import BigHead from "./BigHead";
+import Welcome from "./Welcome";
 class App extends React.Component {
   render() {
-    return <NavBar />;
+    return (
+      <div className="main">
+        <div className="top-container">
+          <BigHead />
+          <NavBar />
+          <Slides />
+        </div>
+        <div className="middle-container">
+          <Welcome />
+        </div>
+      </div>
+    );
   }
 }
 

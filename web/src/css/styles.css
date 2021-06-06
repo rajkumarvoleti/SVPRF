@@ -175,22 +175,159 @@ body {
 }
 
 /* Start */
-.Navbar {
+.middle-container {
+  position: relative;
+  top: 90vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5;
+}
+
+.middle-container > * {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 7fr 1fr;
+      grid-template-columns: 7fr 1fr;
+  background: #101010;
 }
 
 .Navbar .Brand {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+  color: whitesmoke;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Navbar .Brand img {
+  padding: 0;
+  margin: 0;
+  width: 120px;
+  height: auto;
+}
+
+.Navbar .Brand:hover, .Navbar .toggle:hover, .Navbar .links .link:hover {
+  color: #C45100;
+}
+
+.Navbar .toggle {
+  background-color: whitesmoke;
 }
 
 .Navbar .links {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  margin: 20px;
+}
+
+.Navbar .links .link {
+  color: whitesmoke;
+}
+
+.slides {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.slides .item {
+  height: 80vh;
+  width: auto;
+  overflow: hidden;
+  display: none;
+}
+
+.slides .item img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.slides .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.head {
+  position: absolute;
+  z-index: 2;
+  top: 30vh;
+  left: 10vh;
+  width: 40%;
+}
+
+.head h1 {
+  line-height: 1.2;
+  color: #EB710B;
+  font-weight: 800;
+  text-shadow: 0px 0px 5px #101010;
+  font-size: 8vh;
+  font-family: "Merriweather", serif;
+}
+
+.head .btn {
+  margin: 20px 0;
+  border: 1px solid #101010;
+  background-color: #EB710B;
+}
+
+.head .btn:hover {
+  background-color: #C45100;
+}
+
+.welcome .headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcome .headings h3 {
+  color: #EB710B;
+  font-size: 1.5rem;
+}
+
+.welcome .headings h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.welcome .content {
+  padding: 20px 0;
 }
 /*# sourceMappingURL=styles.css.map */

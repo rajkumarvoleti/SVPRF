@@ -8,18 +8,23 @@ import Nav from "react-bootstrap/Nav";
 class NavBar extends React.Component {
   render() {
     return (
-      <>
-        <Navbar bg="dark" variant="dark" className="Navbar">
-          <Navbar.Brand className="Brand" href="#home">
-            Navbar
-          </Navbar.Brand>
-          <Nav className="links">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Navbar className="Navbar" expand="lg">
+        <Navbar.Brand className="Brand" href="#home">
+          <img src="images/logo-crop.png" alt="logo" />
+          <h1>SVPRF</h1>
+        </Navbar.Brand>
+        <Navbar.Toggle className="toggle" aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse className="collpase" id="basic-navbar-nav">
+          <Nav className="links mr-auto">
+            <Nav.Link className="link" href="#home">
+              Home
+            </Nav.Link>
+            <Nav.Link href="#link" className="link">
+              Link
+            </Nav.Link>
           </Nav>
-        </Navbar>
-      </>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }

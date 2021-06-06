@@ -1,0 +1,21 @@
+@import "./variables";
+
+.welcome{
+  .headings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3{
+      color: $orange;
+      font-size: 1.5rem;
+    }
+    h1{
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+  .content{
+    padding: 20px 0;
+  }
+}

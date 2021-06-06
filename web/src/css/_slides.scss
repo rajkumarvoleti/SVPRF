@@ -1,0 +1,19 @@
+@import "./variables";
+
+.slides{
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  .item{
+    height: 80vh;
+    width: auto;
+    overflow: hidden;
+    display: none;
+    img{
+      filter: grayscale(100%)
+    }
+  }
+  .active{
+    display: flex;
+  }
+}
