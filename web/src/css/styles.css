@@ -182,6 +182,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -214,6 +218,9 @@ body {
   -ms-grid-columns: 7fr 1fr;
       grid-template-columns: 7fr 1fr;
   background: #101010;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 .Navbar .Brand {
@@ -257,15 +264,10 @@ body {
 }
 
 .slides .item {
-  height: 80vh;
+  height: 100vh;
   width: auto;
   overflow: hidden;
   display: none;
-}
-
-.slides .item img {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
 }
 
 .slides .active {
@@ -277,9 +279,19 @@ body {
 .head {
   position: absolute;
   z-index: 2;
-  top: 30vh;
-  left: 10vh;
   width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 15vw;
 }
 
 .head h1 {
@@ -295,10 +307,16 @@ body {
   margin: 20px 0;
   border: 1px solid #101010;
   background-color: #EB710B;
+  width: 10rem;
 }
 
 .head .btn:hover {
   background-color: #C45100;
+}
+
+.welcome {
+  position: relative;
+  top: 10rem;
 }
 
 .welcome .headings {
@@ -315,6 +333,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .welcome .headings h3 {
@@ -329,5 +348,122 @@ body {
 
 .welcome .content {
   padding: 20px 0;
+  font-size: 1.2rem;
+}
+
+.about_us {
+  width: 100%;
+  background-color: rgba(216, 214, 214, 0.562);
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+}
+
+.about {
+  width: 80%;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.about h2 {
+  margin: 2rem 0;
+  grid-column: span 2;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about .photo {
+  height: 20rem;
+  background: url("https://source.unsplash.com/collection/190725/1600x900");
+  background-position: center;
+}
+
+.about .content {
+  font-size: 1.2rem;
+  margin: 0 5rem;
+}
+
+.about .content .btn {
+  margin: 1rem 0;
+  background-color: #EB710B;
+  border: 1px solid #101010;
+}
+
+.about .content .btn:hover {
+  background-color: #C45100;
+}
+
+@media (max-width: 750px) {
+  .about .photo, .about .content {
+    grid-column: span 2;
+    margin: 2rem 0;
+  }
+}
+
+.career .about .photo {
+  background: url("https://source.unsplash.com/collection/190723/1600x900");
+}
+
+.icon img {
+  width: 50px;
+  height: auto;
+}
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services .head {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.services .head h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  text-shadow: none;
+}
+
+.services .icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 5rem 0;
+}
+
+.services .icons .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.services .icons .icon > * {
+  margin: 0 20px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 750px) {
+  .services .icons {
+    display: inline;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

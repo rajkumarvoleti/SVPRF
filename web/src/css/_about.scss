@@ -1,0 +1,52 @@
+@import "./variables";
+
+.about_us{
+  width: 100%;
+  background-color: rgba(216, 214, 214, 0.562);
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+}
+
+.about{
+  width: 80%;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  h2{
+    margin: 2rem 0;
+    grid-column: span 2;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .photo{
+    height: 20rem;
+    background: url("https://source.unsplash.com/collection/190725/1600x900");
+    background-position: center;
+  }
+  .content{
+    font-size: 1.2rem;
+    margin: 0 5rem;
+    .btn{
+      margin: 1rem 0;
+      background-color: $orange;
+      border: 1px solid $black;
+    }
+    .btn:hover{
+      background-color: $dark-orange;
+    }
+  }
+  @media (max-width: 750px) {
+    .photo,.content{
+      grid-column: span 2;
+      margin: 2rem 0;
+    }
+  }
+}
+.career{
+  .about .photo{
+    background: url("https://source.unsplash.com/collection/190723/1600x900");
+  }
+}

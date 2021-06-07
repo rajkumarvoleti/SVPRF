@@ -3,6 +3,9 @@
   display : grid;
   grid-template-columns: 7fr 1fr;
   background: $black;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
   .Brand {
     color:whitesmoke;
     font-size: 2rem;

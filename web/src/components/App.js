@@ -3,6 +3,9 @@ import NavBar from "./NavBar";
 import Slides from "./Slides";
 import BigHead from "./BigHead";
 import Welcome from "./Welcome";
+import AboutUs from "./AboutUs";
+import Services from "./Services";
+import Career from "./Career";
 class App extends React.Component {
   render() {
     return (
@@ -14,6 +17,9 @@ class App extends React.Component {
         </div>
         <div className="middle-container">
           <Welcome />
+          <AboutUs />
+          <Services />
+          <Career />
         </div>
       </div>
     );

@@ -1,11 +1,14 @@
 @import "./variables";
 
 .welcome{
+  position: relative;
+  top: 10rem;
   .headings{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     h3{
       color: $orange;
       font-size: 1.5rem;
@@ -17,5 +20,6 @@
   }
   .content{
     padding: 20px 0;
+    font-size: 1.2rem;
   }
 }

@@ -6,7 +6,7 @@ class BigHead extends React.Component {
     return (
       <div className="head">
         <h1>Sri Padha Research Organisation</h1>
-        <Button class="btn" size="lg">
+        <Button className="btn" size="lg">
           Contact Us
         </Button>
       </div>

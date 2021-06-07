@@ -3,9 +3,12 @@
 .head{
   position: absolute;
   z-index: 2;
-  top: 30vh;
-  left: 10vh;
   width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 15vw;
   h1{
     line-height: 1.2;
     color: $orange;
@@ -18,6 +21,7 @@
     margin: 20px 0;
     border: 1px solid $black;
     background-color: $orange;
+    width: 10rem;
   }
   .btn:hover{
     background-color: $dark-orange;
