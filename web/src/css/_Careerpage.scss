@@ -1,0 +1,35 @@
+.CareerPageMain{
+  position: relative;
+  top: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CareerPage{
+  width: 80%;
+  .heading{
+    position: relative;
+    margin: 2rem 0;
+    h1{
+      font-size: 2rem;
+      font-family: $serif;
+      font-weight: 600;
+      color: $dark-blue;
+      text-align: center;
+    }
+  }
+  .content{
+    position: relative;
+    h4{
+      font-size: 1.2rem;
+    }
+    ul{
+      margin: 20px;
+    }
+    ul li{
+      padding: 10px;
+      list-style-type :decimal;
+    }
+  }
+}

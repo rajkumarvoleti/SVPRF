@@ -2,6 +2,10 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 
 class Career extends React.Component {
+  handleClick = () => {
+    this.props.changePage("Career");
+    window.scrollBy(0, -700);
+  };
   render() {
     return (
       <div className="about_us career">
@@ -16,7 +20,7 @@ class Career extends React.Component {
               assisting the seniors,handing communication with
               specalists,web-based research etc...
             </p>
-            <Button class="btn" size="lg">
+            <Button class="btn" onClick={this.handleClick} size="lg">
               Read More
             </Button>
           </div>

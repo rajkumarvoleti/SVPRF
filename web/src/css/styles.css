@@ -230,11 +230,6 @@ body {
   fill: #3FA0EF;
 }
 
-h1, h2, h3 {
-  font-family: "Merriweather", serif;
-  letter-spacing: 2px;
-}
-
 p, label {
   letter-spacing: 1px;
   font-family: "Merriweather Sans", sans-serif;
@@ -687,5 +682,127 @@ p, label {
 .footer .icons {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.AboutUsPageMain {
+  position: relative;
+  top: 40rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.AboutUsPage {
+  width: 80%;
+}
+
+.AboutUsPage .intro {
+  margin: 2rem 0;
+}
+
+.AboutUsPage .intro h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1A74E2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.AboutUsPage .intro p {
+  line-height: 1.5;
+  padding: 10px 0;
+}
+
+.AboutUsPage .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.AboutUsPage .card {
+  width: 450px;
+  background-color: rgba(216, 214, 214, 0.562);
+  margin: 20px;
+  border: 1px solid #101010;
+}
+
+.AboutUsPage .card .heading {
+  position: relative;
+  margin: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.AboutUsPage .card .content {
+  margin: 20px;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.CareerPageMain {
+  position: relative;
+  top: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.CareerPage {
+  width: 80%;
+}
+
+.CareerPage .heading {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.CareerPage .heading h1 {
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  color: #1A74E2;
+  text-align: center;
+}
+
+.CareerPage .content {
+  position: relative;
+}
+
+.CareerPage .content h4 {
+  font-size: 1.2rem;
+}
+
+.CareerPage .content ul {
+  margin: 20px;
+}
+
+.CareerPage .content ul li {
+  padding: 10px;
+  list-style-type: decimal;
 }
 /*# sourceMappingURL=styles.css.map */

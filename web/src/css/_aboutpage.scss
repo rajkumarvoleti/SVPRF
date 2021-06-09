@@ -1,0 +1,53 @@
+@import "./variables";
+
+.AboutUsPageMain{
+  position: relative;
+  top: 40rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AboutUsPage{
+  width: 80%;
+  .intro{
+    margin: 2rem 0;
+    h1{
+    font-family: $serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $dark-blue;
+    text-align: center;
+    padding: 2rem;
+    }
+    p{
+      line-height: 1.5;
+      padding: 10px 0;
+    }
+  }
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card{
+    width: 450px;
+    background-color: rgba(216, 214, 214, 0.562);
+    margin: 20px;
+    border: 1px solid $black;
+    .heading{
+      position: relative;
+      margin: 20px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .content{
+      margin: 20px;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+  }
+}

@@ -2,6 +2,10 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 
 class AboutUs extends React.Component {
+  handleClick = () => {
+    this.props.changePage("AboutUs");
+    window.scrollBy(0, -700);
+  };
   render() {
     return (
       <div className="about_us">
@@ -17,7 +21,7 @@ class AboutUs extends React.Component {
               situation and aids decision-making by optimizing available
               resources for the best possible returns.
             </p>
-            <Button class="btn" size="lg">
+            <Button className="btn" onClick={this.handleClick} size="lg">
               Read More
             </Button>
           </div>
