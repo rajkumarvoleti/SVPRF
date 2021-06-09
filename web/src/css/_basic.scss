@@ -187,3 +187,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+.bottom-container{
+  width: 100%;
+}
+.alert{
+  position: absolute;
+}
+.ScrollUpButton__Container{
+  z-index: 3;
+  border-color: $blue !important;
+  background-color: transparent !important;
+  svg{
+    fill: $blue;
+  }
+}
+h1,h2,h3{
+  font-family: $serif;
+  letter-spacing: 2px;
+}
+p,label{
+  letter-spacing: 1px;
+  font-family: $san-serif;
+}

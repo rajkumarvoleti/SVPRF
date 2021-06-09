@@ -1,0 +1,93 @@
+@import "./variables";
+.contact{
+  position: relative;
+  top: 80rem;
+  background-color: rgba(216, 214, 214, 0.562);
+  .card .card-body>*{
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: repeat(1fr,6);
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .submit{
+    border-radius: 5px;
+    grid-column: span 6;
+    margin-top: 20px;
+  }
+}
+.contact>*{
+  background: none;
+  color: white;
+}
+.contact_head{
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: $serif;
+  letter-spacing: 2px;
+  color: $black;
+  background-color: none;
+
+}
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-header{
+  background: none;
+}
+.card-body {
+  max-width: 750px;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  grid-column: span 2;
+  margin-right: 20px;
+  label{
+    color: $black;
+    padding-left: 5px;
+  }
+}
+.form-group>*{
+  margin: 10px 0;
+}
+.message{
+  grid-row: 2/3;
+  grid-column: span 6;
+  margin-right: 0;
+  textarea{
+    height: 100%;
+  }
+}
+// .form-control{
+
+// }
+.alert{
+  top: 70px;
+  z-index: 2;
+  padding: 5px;
+}
+.message{
+  .alert{
+    top: 270px;
+  }
+}
+
+.thankyou{
+  grid-column: span 6;
+  color: $black;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width:750px) {
+  .form-group{
+    grid-column: span 3;
+  }
+  .message{
+    grid-column: 4/6;
+    grid-row: 1/-1;
+  }
+}

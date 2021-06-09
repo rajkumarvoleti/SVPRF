@@ -12,7 +12,6 @@ const source = [
   "digital.png",
   "booth.webp",
   "skill.webp",
-  "employment.webp",
   "vadvartisement.png",
   "marketing.webp",
   "strategy.webp",
@@ -28,14 +27,13 @@ const content = [
   "Accuracy of Exit Polls",
   "Election management software",
   "Social Media and Election Campaigns",
-  "DIGITAL MEDIA CAMPAIGN",
-  "COMPREHENSIVE RESEARCH AT BOOTH LEVEL",
+  "Digital Media Campaign",
+  "Comprehensive Research At Booth Level",
   "Skill Development",
-  "Employment Guidance",
-  "POLITICAL ADVERTISING",
+  "Political Advertising",
   "Inbound and outbound Election Marketing",
   "Political Campaign Consultants for Strategic Canvassing & More",
-  "ELECTION SURVEY AGENCY",
+  "Election Survey Agency",
 ];
 
 const icons = [];

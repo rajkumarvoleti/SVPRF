@@ -11,7 +11,7 @@ class NavBar extends React.Component {
       <Navbar className="Navbar" expand="lg">
         <Navbar.Brand className="Brand" href="#home">
           <img src="images/logo-crop.png" alt="logo" />
-          <h1>SVPRF</h1>
+          <h1>SPVPRF</h1>
         </Navbar.Brand>
         <Navbar.Toggle className="toggle" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="collpase" id="basic-navbar-nav">

@@ -212,6 +212,34 @@ body {
           align-items: center;
 }
 
+.bottom-container {
+  width: 100%;
+}
+
+.alert {
+  position: absolute;
+}
+
+.ScrollUpButton__Container {
+  z-index: 3;
+  border-color: #3FA0EF !important;
+  background-color: transparent !important;
+}
+
+.ScrollUpButton__Container svg {
+  fill: #3FA0EF;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+  letter-spacing: 2px;
+}
+
+p, label {
+  letter-spacing: 1px;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
 .Navbar {
   display: -ms-grid;
   display: grid;
@@ -242,7 +270,7 @@ body {
 }
 
 .Navbar .Brand:hover, .Navbar .toggle:hover, .Navbar .links .link:hover {
-  color: #C45100;
+  color: #1A74E2;
 }
 
 .Navbar .toggle {
@@ -296,7 +324,7 @@ body {
 
 .head h1 {
   line-height: 1.2;
-  color: #EB710B;
+  color: #1A74E2;
   font-weight: 800;
   text-shadow: 0px 0px 5px #101010;
   font-size: 8vh;
@@ -306,12 +334,12 @@ body {
 .head .btn {
   margin: 20px 0;
   border: 1px solid #101010;
-  background-color: #EB710B;
+  background-color: #1A74E2;
   width: 10rem;
 }
 
 .head .btn:hover {
-  background-color: #C45100;
+  background-color: #1A74E2;
 }
 
 .welcome {
@@ -337,7 +365,7 @@ body {
 }
 
 .welcome .headings h3 {
-  color: #EB710B;
+  color: #1A74E2;
   font-size: 1.5rem;
 }
 
@@ -390,12 +418,12 @@ body {
 
 .about .content .btn {
   margin: 1rem 0;
-  background-color: #EB710B;
+  background-color: #1A74E2;
   border: 1px solid #101010;
 }
 
 .about .content .btn:hover {
-  background-color: #C45100;
+  background-color: #1A74E2;
 }
 
 @media (max-width: 750px) {
@@ -405,7 +433,11 @@ body {
   }
 }
 
-.career .about .photo {
+.about_us.career {
+  margin-top: 5rem !important;
+}
+
+.about_us.career .about .photo {
   background: url("https://source.unsplash.com/collection/190723/1600x900");
 }
 
@@ -465,5 +497,195 @@ body {
   .services .icons {
     display: inline;
   }
+}
+
+.contact {
+  position: relative;
+  top: 80rem;
+  background-color: rgba(216, 214, 214, 0.562);
+}
+
+.contact .card .card-body > * {
+  max-width: 750px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (6)[1fr];
+      grid-template-columns: repeat(1fr, 6);
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.contact .submit {
+  border-radius: 5px;
+  grid-column: span 6;
+  margin-top: 20px;
+}
+
+.contact > * {
+  background: none;
+  color: white;
+}
+
+.contact_head {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+  letter-spacing: 2px;
+  color: #101010;
+  background-color: none;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-header {
+  background: none;
+}
+
+.card-body {
+  max-width: 750px;
+}
+
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  grid-column: span 2;
+  margin-right: 20px;
+}
+
+.form-group label {
+  color: #101010;
+  padding-left: 5px;
+}
+
+.form-group > * {
+  margin: 10px 0;
+}
+
+.message {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  grid-column: span 6;
+  margin-right: 0;
+}
+
+.message textarea {
+  height: 100%;
+}
+
+.alert {
+  top: 70px;
+  z-index: 2;
+  padding: 5px;
+}
+
+.message .alert {
+  top: 270px;
+}
+
+.thankyou {
+  grid-column: span 6;
+  color: #101010;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 750px) {
+  .form-group {
+    grid-column: span 3;
+  }
+  .message {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+    grid-column: 4/6;
+    grid-row: 1/-1;
+  }
+}
+
+.footer_top {
+  width: 100%;
+  background-color: #101010 !important;
+  position: relative;
+  top: 79rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 750px;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 8rem;
+}
+
+.footer > * {
+  height: 5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .rights {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.footer .rights > * {
+  width: 100%;
+  text-align: left;
+}
+
+.footer .icons {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=styles.css.map */

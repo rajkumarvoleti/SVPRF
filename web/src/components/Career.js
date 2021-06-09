@@ -12,14 +12,9 @@ class Career extends React.Component {
             <p>
               We offer internship opportunities to young aspirants who are
               interested in public policy and governance. If you are selected as
-              a volunteer/associate, your responsibilities will include:
-            </p>
-            <p>
-              Assisting the seniors with all the logistical work, background
-              research on relevant topics,handling communications with
-              specialists, MPs/MLAs, and partner organizations for the upcoming
-              domestic roundtable programs, budget session of the parliament and
-              academic programs etc...
+              a volunteer/associate, your responsibilities will include
+              assisting the seniors,handing communication with
+              specalists,web-based research etc...
             </p>
             <Button class="btn" size="lg">
               Read More

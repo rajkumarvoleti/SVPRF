@@ -6,6 +6,9 @@ import Welcome from "./Welcome";
 import AboutUs from "./AboutUs";
 import Services from "./Services";
 import Career from "./Career";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import ScrollUp from "./ScrollUp";
 class App extends React.Component {
   render() {
     return (
@@ -17,9 +20,14 @@ class App extends React.Component {
         </div>
         <div className="middle-container">
           <Welcome />
+          <ScrollUp />
           <AboutUs />
           <Services />
           <Career />
+        </div>
+        <div className="bottom-container">
+          <Contact />
+          <Footer />
         </div>
       </div>
     );

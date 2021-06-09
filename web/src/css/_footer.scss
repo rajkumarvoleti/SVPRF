@@ -1,0 +1,46 @@
+@import "./variables";
+
+.footer_top{
+  width: 100%;
+  background-color: $black !important;
+  position: relative;
+  top: 79rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer{
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 750px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+}
+.footer>*{
+  height: 5rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer{
+  .rights{
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+  }
+  .rights>*{
+    width: 100%;
+    text-align: left;
+  }
+  .icons{
+    justify-content: space-around;
+  }
+}
