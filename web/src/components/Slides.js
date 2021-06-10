@@ -5,18 +5,18 @@ class Slides extends React.Component {
   render() {
     return (
       <Carousel fade className="slides">
-        <Carousel.Item className="item" interval={2000}>
+        <Carousel.Item className="item" interval={4000}>
           <img
             className="d-block w-100"
             src="https://source.unsplash.com/user/erondu/1600x900"
             alt="First slide"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
-        <Carousel.Item className="item" interval={2000}>
+        <Carousel.Item className="item" interval={4000}>
           <img
             className="d-block w-100"
             src="https://source.unsplash.com/collection/190727/1600x900"
@@ -28,7 +28,7 @@ class Slides extends React.Component {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className="item" interval={2000}>
+        <Carousel.Item className="item" interval={4000}>
           <img
             className="d-block w-100"
             src="https://source.unsplash.com/collection/190726/1600x900"

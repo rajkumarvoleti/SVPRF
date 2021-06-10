@@ -6,7 +6,7 @@ class AboutUsPage extends React.Component {
       <div className="AboutUsPageMain" id="AboutUs">
         <div className="AboutUsPage">
           <div className="intro">
-            <h1>About Us</h1>
+            <h2>About Us</h2>
             <div className="content">
               <p>
                 One of the SPRO’s strength is embedded in their efficient group
@@ -33,48 +33,45 @@ class AboutUsPage extends React.Component {
           <div className="cards">
             <div className="card">
               <div className="heading">
-                <h2>WHO ARE WE</h2>
+                <h3>WHO ARE WE</h3>
               </div>
               <div className="content">
                 <p>
-                  <div className="content">
-                    <p>
-                      Our management team is made up of graduates from
-                      prestigious educational institutions like IIT, IIM, NIT,
-                      and universities. Engineers and MCAs from prestigious
-                      institutions lead the IT and database management
-                      department. Graduates from top institutes of mass
-                      communication and political science work as surveyors and
-                      data collectors, and experienced social sciences
-                      post-graduates oversee the political, social, and economic
-                      research division.
-                    </p>
-                  </div>
+                  Our management team is made up of graduates from prestigious
+                  educational institutions like IIT, IIM, NIT, and universities.
+                  Engineers and MCAs from prestigious institutions lead the IT
+                  and database management department. Graduates from top
+                  institutes of mass communication and political science work as
+                  surveyors and data collectors, and experienced social sciences
+                  post-graduates oversee the political, social, and economic
+                  research division.
                 </p>
               </div>
             </div>
             <div className="card">
               <div className="heading">
-                <h2>WHAT WE ARE</h2>
+                <h3>WHAT WE ARE</h3>
               </div>
               <div className="content">
-                SPRO is a leader in the field of election studies. Our core
-                values of "integrity and loyalty" to our clients are something
-                we believe in and are proud of. We have been in the political
-                consulting business for a few years and have successfully
-                assisted our clients in achieving their objectives, winning
-                elections, meeting public expectations, and rising to the top.
-                We help them assess current trends and shape the image of the
-                leader or candidate, as well as the party's position, using
-                scientific methods. We assess political trends using the most
-                up-to-date methods, provide the best platform for developing a
-                brand leadership image, and equip them with the technology to
-                maintain it.
+                <p>
+                  SPRO is a leader in the field of election studies. Our core
+                  values of "integrity and loyalty" to our clients are something
+                  we believe in and are proud of. We have been in the political
+                  consulting business for a few years and have successfully
+                  assisted our clients in achieving their objectives, winning
+                  elections, meeting public expectations, and rising to the top.
+                  We help them assess current trends and shape the image of the
+                  leader or candidate, as well as the party's position, using
+                  scientific methods. We assess political trends using the most
+                  up-to-date methods, provide the best platform for developing a
+                  brand leadership image, and equip them with the technology to
+                  maintain it.
+                </p>
               </div>
             </div>
             <div className="card">
               <div className="heading">
-                <h2>OUR VALUES, VISION, AND MISSION:</h2>
+                <h3>OUR VALUES, VISION, AND MISSION:</h3>
               </div>
               <div className="content">
                 <p>

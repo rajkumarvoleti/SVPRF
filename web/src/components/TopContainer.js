@@ -9,7 +9,7 @@ class TopContainer extends React.Component {
     return (
       <div className="top-container">
         <BigHead />
-        <NavBar />
+        <NavBar changePage={this.props.changePage} />
         <Slides />
         <ScrollUp />
       </div>

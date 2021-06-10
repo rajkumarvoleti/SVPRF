@@ -6,7 +6,7 @@ class Careerpage extends React.Component {
       <div className="CareerPageMain">
         <div className="CareerPage">
           <div className="heading">
-            <h1>Career</h1>
+            <h2>Career</h2>
           </div>
           <div className="content">
             <h4>

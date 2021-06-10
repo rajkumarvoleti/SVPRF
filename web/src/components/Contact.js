@@ -107,7 +107,7 @@ class ContactForm extends React.Component {
 
     if (!formValid) {
       return (
-        <div className="contact">
+        <div className="contact" id="Contact">
           <div className="card shadow-sm border-0 px-3 rounded-2 mb-3 py-4 mx-auto mt-5 ">
             <div className="card-header  border-0 text-center text-uppercase">
               <h3 className="contact_head">Contact Us</h3>
@@ -218,10 +218,10 @@ class ContactForm extends React.Component {
       );
     } else {
       return (
-        <div className="contact">
+        <div className="contact" id="Contact">
           <div className="card shadow-sm border-0 px-3 rounded-2 mb-3 py-4 mx-auto mt-5 ">
             <div className="card-header  border-0 text-center text-uppercase">
-              <h3 className="contact_head">Contact Us</h3>
+              <h2 className="contact_head">Contact Us</h2>
             </div>
             <div className="card-body">
               <div className="thankyou">

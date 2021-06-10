@@ -6,13 +6,13 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
 }
 .AboutUsPage{
   width: 80%;
   .intro{
     margin: 2rem 0;
-    h1{
+    h2{
     font-family: $serif;
     font-size: 2rem;
     font-weight: 600;
@@ -30,9 +30,14 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    align-items: start;
   }
   .card{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
     width: 450px;
+    height: 500px;
     background-color: rgba(216, 214, 214, 0.562);
     margin: 20px;
     border: 1px solid $black;
@@ -50,4 +55,7 @@
       line-height: 1.2;
     }
   }
+}
+.card:last-child{
+  height: auto;
 }

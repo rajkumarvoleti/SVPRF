@@ -1,16 +1,8 @@
 import React from "react";
-import TopContainer from "./TopContainer";
-import BottomContainer from "./BottomContainer";
-import Router from "./Router";
+import Router2 from "./Router2";
 class App extends React.Component {
   render() {
-    return (
-      <div className="main">
-        <TopContainer />
-        <Router />
-        <BottomContainer />
-      </div>
-    );
+    return <Router2 />;
   }
 }
 

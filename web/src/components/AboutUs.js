@@ -8,7 +8,7 @@ class AboutUs extends React.Component {
   };
   render() {
     return (
-      <div className="about_us">
+      <div className="about_us" id="About">
         <div className="about">
           <h2>About</h2>
           <div className="photo"></div>

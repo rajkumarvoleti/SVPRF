@@ -7,6 +7,7 @@ import Career from "./Career";
 class MiddleContainer extends React.Component {
   changePage = (str) => {
     this.props.history.push(`/${str}`);
+    window.scrollTo(0, 1200);
   };
   render() {
     return (

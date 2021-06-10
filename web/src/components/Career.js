@@ -5,10 +5,11 @@ class Career extends React.Component {
   handleClick = () => {
     this.props.changePage("Career");
     window.scrollBy(0, -700);
+    console.log("heyyy");
   };
   render() {
     return (
-      <div className="about_us career">
+      <div className="about_us career" id="Career">
         <div className="about">
           <h2>Career</h2>
           <div className="photo"></div>

@@ -49,9 +49,9 @@ for (let i = 0; i < content.length; i++) {
 class Services extends React.Component {
   render() {
     return (
-      <div className="services">
+      <div className="services" id="Services">
         <div className="head">
-          <h1>Services</h1>
+          <h2>Services</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut
             placeat possimus natus dolorum autem maiores beatae consectetur,

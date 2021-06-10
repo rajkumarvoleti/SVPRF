@@ -1,9 +1,8 @@
 @import "./variables";
 .Navbar{
   display : grid;
-  grid-template-columns: 7fr 1fr;
+  grid-template-columns: 2fr 1fr;
   background: $black;
-  position: fixed;
   z-index: 2;
   width: 100%;
   .Brand {
@@ -29,5 +28,11 @@
   }
   .links .link {
     color: whitesmoke;
+  }
+}
+@media (max-width:750px) {
+  .Navbar{
+    grid-template-columns: 7fr 1fr;
+
   }
 }
