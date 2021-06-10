@@ -5,7 +5,6 @@ class Career extends React.Component {
   handleClick = () => {
     this.props.changePage("Career");
     window.scrollBy(0, -700);
-    console.log("heyyy");
   };
   render() {
     return (

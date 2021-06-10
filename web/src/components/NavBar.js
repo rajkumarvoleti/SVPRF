@@ -3,31 +3,50 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { withRouter } from "react-router-dom";
 
-var stri = "#Contact";
 class NavBar extends React.Component {
-  componentDidUpdate() {
-    var x = document.querySelector(stri);
-    console.log(stri);
-    console.log(x);
-  }
-
   goBack = () => {
-    return new Promise((res, rej) => {
-      res(this.props.history.goBack());
-    });
+    this.props.history.goBack();
   };
-  scrollUp = async (str) => {
-    stri = str;
+  scrollUp = (str) => {
     var x = document.querySelector(str);
+    console.log(str);
     if (!x) {
-      await this.goBack();
-    } else if (str === "#Contact") {
+      if (str === "#Career") this.scrollUp("#CareerPage");
+      else if (str === "#About") this.scrollUp("#AboutPage");
+      else {
+        this.props.changeNav("str");
+        this.goBack();
+      }
+    } else if (
+      str === "#Contact" ||
+      str === "#AboutPage" ||
+      str === "#CareerPage"
+    ) {
       window.scrollTo(0, x.offsetTop - 100);
     } else {
       window.scrollTo(0, x.offsetTop + 450);
     }
   };
+  applyStlyes = (str) => {
+    const style = this.props.styles[str];
+    return style;
+  };
   render() {
+    var home_style = {
+      display: this.applyStlyes("home_style"),
+    };
+    var about_style = {
+      display: this.applyStlyes("about_style"),
+    };
+    var services_style = {
+      display: this.applyStlyes("services_style"),
+    };
+    var career_style = {
+      display: this.applyStlyes("career_style"),
+    };
+    var contact_style = {
+      display: this.applyStlyes("contact_style"),
+    };
     return (
       <Navbar
         fixed="top"
@@ -43,6 +62,7 @@ class NavBar extends React.Component {
         <Navbar.Collapse className="collpase" id="basic-navbar-nav">
           <Nav className="links mr-auto">
             <Nav.Link
+              style={home_style}
               active={false}
               className="link"
               onClick={() => this.scrollUp("#home")}
@@ -51,6 +71,7 @@ class NavBar extends React.Component {
               Home
             </Nav.Link>
             <Nav.Link
+              style={about_style}
               active={false}
               href="#"
               onClick={() => this.scrollUp("#About")}
@@ -59,6 +80,7 @@ class NavBar extends React.Component {
               About
             </Nav.Link>
             <Nav.Link
+              style={services_style}
               active={false}
               href="#"
               onClick={() => this.scrollUp("#Services")}
@@ -67,6 +89,7 @@ class NavBar extends React.Component {
               Services
             </Nav.Link>
             <Nav.Link
+              style={career_style}
               active={false}
               href="#"
               onClick={() => this.scrollUp("#Career")}
@@ -75,6 +98,7 @@ class NavBar extends React.Component {
               Career
             </Nav.Link>
             <Nav.Link
+              style={contact_style}
               active={false}
               href="#"
               onClick={() => this.scrollUp("#Contact")}

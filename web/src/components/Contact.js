@@ -169,7 +169,7 @@ class ContactForm extends React.Component {
                   )}
                 </div>
                 <div className="form-group">
-                  <label className="mb-0"> Contact Number (Optional)</label>
+                  <label className="mb-0">Contact Number(Optional)</label>
                   <input
                     name="contact"
                     type="text"
