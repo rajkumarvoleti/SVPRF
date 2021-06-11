@@ -1,0 +1,63 @@
+.Join_Us{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.Join_Us .join_head{
+  color: $dark-blue;
+  margin: 2rem;
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+.Join_Us .submit{
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  .btn{
+    width: 10rem;
+    height: 3rem;
+  }
+}
+.Join_Us>*{
+  display: flex;
+  grid-column: span 1;
+  .resume{
+    border: 1px solid #ced4da;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .resume::placeholder{
+    display: none;
+  }
+}
+.inputTag{
+  .tagInputFieldClass{
+    width: 100%;
+    border: 1px solid #ced4da;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .tagClass{
+    padding: 5px;
+  }
+}
+input[type=text], textarea {
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1); 
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+@media (max-width:750px) {
+  .Join_Us>*{
+    display: flex;
+    grid-column: span 2;
+  }
+}

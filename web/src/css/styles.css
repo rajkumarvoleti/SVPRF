@@ -756,7 +756,7 @@ p, label {
           justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 .AboutUsPage .card {
@@ -805,6 +805,10 @@ p, label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .CareerPage {
@@ -830,6 +834,7 @@ p, label {
 
 .CareerPage .content h4 {
   font-size: 1.2rem;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .CareerPage .content ul {
@@ -838,6 +843,112 @@ p, label {
 
 .CareerPage .content ul li {
   padding: 10px;
+  line-height: 1.5;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1rem;
   list-style-type: decimal;
+}
+
+.Join_Us {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Join_Us .join_head {
+  color: #1A74E2;
+  margin: 2rem;
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Join_Us .submit {
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Join_Us .submit .btn {
+  width: 10rem;
+  height: 3rem;
+}
+
+.Join_Us > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: span 1;
+}
+
+.Join_Us > * .resume {
+  border: 1px solid #ced4da;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.Join_Us > * .resume::-webkit-input-placeholder {
+  display: none;
+}
+
+.Join_Us > * .resume:-ms-input-placeholder {
+  display: none;
+}
+
+.Join_Us > * .resume::-ms-input-placeholder {
+  display: none;
+}
+
+.Join_Us > * .resume::placeholder {
+  display: none;
+}
+
+.inputTag .tagInputFieldClass {
+  width: 100%;
+  border: 1px solid #ced4da;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.inputTag .tagClass {
+  padding: 5px;
+}
+
+input[type=text], textarea {
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, textarea:focus {
+  -webkit-box-shadow: 0 0 5px #51cbee;
+          box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
+}
+
+@media (max-width: 750px) {
+  .Join_Us > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-column: span 2;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

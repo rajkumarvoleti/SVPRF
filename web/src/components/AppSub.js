@@ -12,6 +12,12 @@ class AppSub extends React.Component {
       contact_style: "flex",
     },
   };
+  componentDidMount() {
+    const styles = localStorage.getItem("styles");
+    if (styles) {
+      this.setState({ styles: { ...JSON.parse(styles) } });
+    }
+  }
   changePage = (str) => {
     this.props.history.push(`/${str}`);
   };
@@ -41,6 +47,7 @@ class AppSub extends React.Component {
       styles.contact_style = "flex";
       this.setState({ styles });
     }
+    localStorage.setItem("styles", JSON.stringify(styles));
     // optionsSelected[name] = { ...obj };
     // this.setState({ optionsSelected });
   };

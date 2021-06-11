@@ -1,5 +1,5 @@
 import React from "react";
-
+import JoinUs from "./JoinUs";
 class Careerpage extends React.Component {
   render() {
     return (
@@ -37,6 +37,7 @@ class Careerpage extends React.Component {
             </ul>
           </div>
         </div>
+        <JoinUs />
       </div>
     );
   }

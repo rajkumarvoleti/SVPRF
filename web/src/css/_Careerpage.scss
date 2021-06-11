@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .CareerPage{
@@ -23,12 +24,16 @@
     position: relative;
     h4{
       font-size: 1.2rem;
+      font-family: $san-serif;
     }
     ul{
       margin: 20px;
     }
     ul li{
       padding: 10px;
+      line-height: 1.5;
+      font-family: $san-serif;
+      font-size: 1rem;
       list-style-type :decimal;
     }
   }
