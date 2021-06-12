@@ -70,7 +70,7 @@ class JoinUs extends React.Component {
           education: "",
           role: false,
           category: "",
-          resume: null,
+          resume: "",
         }}
       >
         {({
@@ -107,7 +107,7 @@ class JoinUs extends React.Component {
               />
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email fuaddress</Form.Label>
               <Form.Control
                 name="email"
                 type="email"
@@ -151,7 +151,6 @@ class JoinUs extends React.Component {
                   role_inValid ? "form-control is-valid" : "form-control"
                 }
                 value={values.role}
-                isValid={touched.role && !errors.role}
                 onChange={(option) => {
                   handleChange(option);
                   if (option) this.updateValidation("role", true);
@@ -160,7 +159,7 @@ class JoinUs extends React.Component {
                 // isInvalid={!!errors.role}
                 // feedback={errors.role}
               >
-                <option hidden selected="selected" value="">
+                <option hidden defaultValue value="">
                   -- select an option --
                 </option>
                 <option value="1">Volunteer</option>
@@ -184,11 +183,9 @@ class JoinUs extends React.Component {
                   if (option) this.updateValidation("category", true);
                   else this.updateValidation("category", true);
                 }}
-                isValid={touched.category && !errors.category}
-                isInvalid={!!errors.category}
                 feedback={errors.category}
               >
-                <option hidden selected="selected" value>
+                <option hidden defaultValue value>
                   -- select an option --
                 </option>
                 <option value="1">Social Media</option>

@@ -15,7 +15,7 @@ const Router = (props) => (
       /> */}
       <Route
         changeNav={props.changeNav}
-        exact
+        exact={true}
         path="/"
         render={(prop) => (
           <MiddleContainer changeNav={props.changeNav} {...prop} />
@@ -23,13 +23,11 @@ const Router = (props) => (
       />
       <Route
         // onChange={window.scrollTo(0, 0)}
-        exact
         path="/AboutUs"
         component={AboutUsPage}
       />
       <Route
         // onChange={window.scrollTo(0, 0)}
-        exact
         path="/Career"
         component={Careerpage}
       />
