@@ -20,7 +20,7 @@ class Career extends React.Component {
               assisting the seniors,handing communication with
               specalists,web-based research etc...
             </p>
-            <Button class="btn" onClick={this.handleClick} size="lg">
+            <Button className="btn" onClick={this.handleClick} size="lg">
               Read More
             </Button>
           </div>

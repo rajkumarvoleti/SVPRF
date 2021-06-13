@@ -55,8 +55,8 @@ class NavBar extends React.Component {
         expand="lg"
       >
         <Navbar.Brand className="Brand">
-          <img src="images/logo-crop.png" alt="logo" />
-          <h3>SPVPRF</h3>
+          <img src="images/new_logo.png" alt="logo" />
+          <h3>SVPRF</h3>
         </Navbar.Brand>
         <Navbar.Toggle className="toggle" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="collpase" id="basic-navbar-nav">

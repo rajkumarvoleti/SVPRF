@@ -23,8 +23,6 @@ class AppSub extends React.Component {
   };
   changeNav = (str) => {
     var styles = { ...this.state.styles };
-    console.log("ok working");
-    console.log(str);
     if (str === "AboutUs") {
       styles.home_style = "flex";
       styles.about_style = "flex";

@@ -260,7 +260,7 @@ p, label {
 }
 
 .Navbar .Brand {
-  color: whitesmoke;
+  color: #1A74E2;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,7 +273,7 @@ p, label {
 .Navbar .Brand img {
   padding: 0;
   margin: 0;
-  width: 120px;
+  width: 80px;
   height: auto;
 }
 
@@ -290,7 +290,7 @@ p, label {
 }
 
 .Navbar .links .link {
-  color: whitesmoke;
+  color: #1A74E2;
 }
 
 @media (max-width: 750px) {
@@ -392,6 +392,7 @@ p, label {
 .welcome .content {
   padding: 20px 0;
   font-size: 1.2rem;
+  text-align: center !important;
 }
 
 .about_us {
@@ -863,6 +864,13 @@ p, label {
           justify-content: center;
 }
 
+.error {
+  position: absolute;
+  color: red;
+  top: 80px;
+  font-size: 15px !important;
+}
+
 .Join_Us .join_head {
   color: #1A74E2;
   margin: 2rem;
@@ -891,6 +899,7 @@ p, label {
 }
 
 .Join_Us > * {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

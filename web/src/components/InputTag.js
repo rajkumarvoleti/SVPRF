@@ -12,24 +12,13 @@ class InputTag extends React.Component {
     super(props);
 
     this.state = {
-      tags: [
-        // { id: "Thailand", text: "Thailand" },
-        // { id: "India", text: "India" },
-      ],
-      suggestions: [
-        // { id: "USA", text: "USA" },
-        // { id: "Germany", text: "Germany" },
-        // { id: "Austria", text: "Austria" },
-        // { id: "Costa Rica", text: "Costa Rica" },
-        // { id: "Sri Lanka", text: "Sri Lanka" },
-        // { id: "Thailand", text: "Thailand" },
-      ],
+      tags: [],
+      suggestions: [],
     };
     this.handleDelete = this.handleDelete.bind(this);
     this.handleAddition = this.handleAddition.bind(this);
     // this.handleDrag = this.handleDrag.bind(this);
   }
-
   handleDelete(i) {
     const { tags } = this.state;
     this.setState({
@@ -40,7 +29,11 @@ class InputTag extends React.Component {
   handleAddition(tag) {
     this.setState((state) => ({ tags: [...state.tags, tag] }));
   }
-
+  componentDidUpdate() {
+    if (this.props.tags.length !== this.state.tags.length) {
+      this.props.getTags(this.state.tags);
+    }
+  }
   // handleDrag(tag, currPos, newPos) {
   //   const tags = [...this.state.tags];
   //   const newTags = tags.slice();
@@ -70,6 +63,7 @@ class InputTag extends React.Component {
           tags={tags}
           suggestions={suggestions}
           handleDelete={this.handleDelete}
+          handleChange={this.handleChange}
           handleAddition={this.handleAddition}
           // handleDrag={this.handleDrag}
           delimiters={delimiters}

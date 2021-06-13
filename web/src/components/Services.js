@@ -11,9 +11,7 @@ const source = [
   "social.webp",
   "digital.png",
   "booth.webp",
-  "skill.webp",
   "vadvartisement.png",
-  "marketing.webp",
   "strategy.webp",
   "survey2.png",
 ];
@@ -29,9 +27,7 @@ const content = [
   "Social Media and Election Campaigns",
   "Digital Media Campaign",
   "Comprehensive Research At Booth Level",
-  "Skill Development",
   "Political Advertising",
-  "Inbound and outbound Election Marketing",
   "Political Campaign Consultants for Strategic Canvassing & More",
   "Election Survey Agency",
 ];
@@ -39,7 +35,7 @@ const content = [
 const icons = [];
 for (let i = 0; i < content.length; i++) {
   icons.push(
-    <div className="icon">
+    <div className="icon" key={i}>
       <img src={`images/${source[i]}`} alt={source[i]} />
       <p>{content[i]}</p>
     </div>

@@ -2,17 +2,16 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import InputTag from "./InputTag";
-import { Formik } from "formik";
+import { Formik, ErrorMessage } from "formik";
 import * as yup from "yup";
-
+import base from "../base";
+import { firebaseApp } from "../base";
+const Id = "form" + Date.now();
 class JoinUs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      validation: {
-        role_inValid: false,
-        category_inValid: false,
-      },
+      intern: false,
       value: {
         name: "",
         email: "",
@@ -21,54 +20,90 @@ class JoinUs extends React.Component {
         role: "",
         category: "",
         resume: "",
+        tags: [],
       },
+      form_value: [],
     };
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
-  // handleChange(event) {
-  //   // this.setState({ value: event.target.value });
-  //   console.log(event.target.value);
-  // }
-
-  // handleSubmit(event) {
-  //   alert("An essay was submitted: " + this.state.value);
-  //   event.preventDefault();
-  // }
-  // .string()
-  // .oneOf(["canEmail", "canText", "canShowUpAtMyHome"])
-  // .required(),
-  // updateForm
-  updateValidation = (str, boole) => {
-    console.log(str);
-    var validation = { ...this.state.validation };
-    const element = str + "_inValid";
-    validation[element] = boole;
-    this.setState({ validation });
-    console.log(this.props);
+  getTags = (obj) => {
+    var value = { ...this.state.value };
+    value.tags = [...obj];
+    this.setState({ value });
+  };
+  prevent = (e) => {
+    e.preventDefault();
+  };
+  updateState = (e, str) => {
+    var value = { ...this.state.value };
+    if (str === "resume") {
+      var file = e.target.files[0];
+      console.log(file);
+      firebaseApp
+        .storage()
+        .ref(`images/${Id}`)
+        .put(file)
+        .on(
+          "state_changed",
+          (snapshot) => {
+            const progress = Math.round(
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            );
+            this.setState({ progress });
+          },
+          (error) => this.setState({ error: error.message })
+        );
+      value[str] = file;
+    } else value[str] = e.target.value;
+    this.setState({ value });
+  };
+  saveToLocal = (values) => {
+    var form_value = this.state.form_value;
+    const tags = this.state.value.tags;
+    values["tags"] = tags;
+    form_value.push(values);
+    this.setState({ form_value });
+    localStorage.setItem(Id, JSON.stringify({ ...this.state.form_value }));
+    base.post(Id, {
+      data: values,
+    });
   };
   render() {
+    const phoneRegExp =
+      /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
     const schema = yup.object().shape({
-      name: yup.string().required(),
-      email: yup.string().required(),
-      number: yup.string().required(),
+      name: yup.string().required("name is required"),
+      email: yup.string().email("Invalid email").required("Required"),
+      number: yup
+        .string()
+        .matches(phoneRegExp, "Phone number is not valid")
+        .test((val) => val && val.length === 10),
       education: yup.string().required(),
       role: yup.string().required(),
-      category: yup.string().required(),
+      category: yup.string().when("role", {
+        is: "Intern",
+        then: yup.string().required(),
+        otherwise: yup.string(),
+      }),
       resume: yup.mixed().required(),
+      tag: yup.string(),
     });
-    const role_inValid = this.state.validation.role_inValid;
-    const category_inValid = this.state.validation.category_inValid;
     return (
       <Formik
         validationSchema={schema}
-        onSubmit={console.log}
+        onSubmit={async (values) => {
+          await new Promise((resolve) => setTimeout(resolve, 500));
+          alert(JSON.stringify(values, null, 2));
+          this.saveToLocal(values);
+          this.prevent();
+        }}
+        validator={() => ({})}
         initialValues={{
           name: "",
           email: "",
           number: "",
           education: "",
-          role: false,
+          role: "",
           category: "",
           resume: "",
         }}
@@ -81,16 +116,9 @@ class JoinUs extends React.Component {
           touched,
           isValid,
           errors,
+          setFieldValue,
         }) => (
-          <Form
-            noValidate
-            onSubmit={(values) => {
-              handleSubmit();
-              alert(JSON.stringify(values, null, 2));
-              console.log(JSON.stringify(values, null, 2));
-            }}
-            className="Join_Us"
-          >
+          <Form onSubmit={handleSubmit} noValidate className="Join_Us">
             <div className="join_head">
               <h2>Join Us</h2>
             </div>
@@ -99,24 +127,44 @@ class JoinUs extends React.Component {
               <Form.Control
                 name="name"
                 type="text"
+                className={
+                  touched.name ? (errors.name ? "is-invalid" : "is-valid") : ""
+                }
                 placeholder="Enter Name"
                 value={values.name}
+                onChangeCapture={(e) => {
+                  this.updateState(e, "name");
+                }}
                 onChange={handleChange}
-                isValid={touched.name && !errors.name}
-                isInvalid={!!errors.name}
+                onBlur={handleBlur}
               />
+              <p className="error">
+                <ErrorMessage name="name" />
+              </p>
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email fuaddress</Form.Label>
+              <Form.Label>Email address</Form.Label>
               <Form.Control
                 name="email"
                 type="email"
+                className={
+                  touched.email
+                    ? errors.email
+                      ? "is-invalid"
+                      : "is-valid"
+                    : ""
+                }
                 placeholder="Enter email"
                 value={values.email}
                 onChange={handleChange}
-                isValid={touched.email && !errors.email}
-                isInvalid={!!errors.email}
+                onBlur={handleBlur}
+                onChangeCapture={(e) => {
+                  this.updateState(e, "email");
+                }}
               />
+              <p className="error">
+                <ErrorMessage name="email" />
+              </p>
             </Form.Group>
             <Form.Group controlId="formBasicNumber">
               <Form.Label>Contact Number</Form.Label>
@@ -124,23 +172,47 @@ class JoinUs extends React.Component {
                 name="number"
                 type="number"
                 placeholder="Enter number"
+                className={
+                  touched.number
+                    ? errors.number
+                      ? "is-invalid"
+                      : "is-valid"
+                    : ""
+                }
                 value={values.number}
                 onChange={handleChange}
-                isValid={touched.number && !errors.number}
-                isInvalid={!!errors.number}
+                onBlur={handleBlur}
+                onChangeCapture={(e) => {
+                  this.updateState(e, "number");
+                }}
               />
+              <p className="error">
+                <ErrorMessage name="number" />
+              </p>
             </Form.Group>
             <Form.Group controlId="formBasicEducation">
               <Form.Label>Higher Education</Form.Label>
               <Form.Control
                 name="education"
                 type="text"
+                className={
+                  touched.education
+                    ? errors.education
+                      ? "is-invalid"
+                      : "is-valid"
+                    : ""
+                }
                 placeholder="Enter your qualifications"
                 onChange={handleChange}
+                onBlur={handleBlur}
+                onChangeCapture={(e) => {
+                  this.updateState(e, "education");
+                }}
                 value={values.education}
-                isValid={touched.education && !errors.education}
-                isInvalid={!!errors.education}
               />
+              <p className="error">
+                <ErrorMessage name="education" />
+              </p>
             </Form.Group>
             <Form.Group>
               <Form.Label>Role</Form.Label>
@@ -148,70 +220,101 @@ class JoinUs extends React.Component {
                 style={{ display: "block" }}
                 name="role"
                 className={
-                  role_inValid ? "form-control is-valid" : "form-control"
+                  touched.role
+                    ? errors.role
+                      ? "is-invalid form-control"
+                      : "is-valid form-control"
+                    : "form-control"
                 }
                 value={values.role}
-                onChange={(option) => {
-                  handleChange(option);
-                  if (option) this.updateValidation("role", true);
-                  else this.updateValidation("role", true);
+                onChange={handleChange}
+                onBlur={handleBlur}
+                onChangeCapture={(e) => {
+                  if (e.target.value === "Intern")
+                    this.setState({ intern: true });
+                  else this.setState({ intern: false });
+                  this.updateState(e, "role");
                 }}
-                // isInvalid={!!errors.role}
-                // feedback={errors.role}
               >
                 <option hidden defaultValue value="">
                   -- select an option --
                 </option>
-                <option value="1">Volunteer</option>
-                <option value="2">Intern</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Intern">Intern</option>
               </select>
-              {errors.color && touched.color && (
-                <div className="input-feedback">{errors.color}</div>
-              )}
+              <p className="error">
+                <ErrorMessage name="role" />
+              </p>
             </Form.Group>
             <Form.Group>
               <Form.Label>Intern Category</Form.Label>
               <select
-                disabled={false}
+                disabled={!this.state.intern}
                 name="category"
                 className={
-                  category_inValid ? "form-control is-valid" : "form-control"
+                  touched.category
+                    ? errors.category
+                      ? "is-invalid form-control"
+                      : "is-valid form-control"
+                    : "form-control"
                 }
                 value={values.category}
-                onChange={(option) => {
-                  handleChange(option);
-                  if (option) this.updateValidation("category", true);
-                  else this.updateValidation("category", true);
+                onChange={handleChange}
+                onBlur={handleBlur}
+                onChangeCapture={(e) => {
+                  this.updateState(e, "category");
                 }}
-                feedback={errors.category}
               >
                 <option hidden defaultValue value>
                   -- select an option --
                 </option>
-                <option value="1">Social Media</option>
-                <option value="2">Digital Marketing</option>
-                <option value="3">Research</option>
-                <option value="4">Data Analystics</option>
-                <option value="5">Content Writing</option>
-                <option value="6">Technical</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Research">Research</option>
+                <option value="Data Analystics">Data Analystics</option>
+                <option value="Content Writing">Content Writing</option>
+                <option value="Technical">Technical</option>
               </select>
+              <p className="error">
+                <ErrorMessage name="category" />
+              </p>
             </Form.Group>
             <Form.Group controlId="formFile" className="mb-3">
               <Form.Label>Resume</Form.Label>
               <Form.File
                 name="resume"
                 type="file"
-                className="resume"
+                className={
+                  touched.resume
+                    ? errors.resume
+                      ? "is-invalid resume"
+                      : "is-valid resume"
+                    : "resume"
+                }
                 value={values.resume}
+                onChangeCapture={(e) => {
+                  this.updateState(e, "resume");
+                }}
                 onChange={handleChange}
-                isValid={touched.resume && !errors.resume}
-                feedback={errors.resume}
-                isInvalid={!!errors.resume}
+                onBlur={handleBlur}
               />
+              <p className="error">
+                <ErrorMessage name="resume" />
+              </p>
             </Form.Group>
             <Form.Group>
               <Form.Label>Skills</Form.Label>
-              <InputTag />
+              <InputTag
+                getTags={this.getTags}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                onChangeCapture={(e) => {
+                  this.updateState(e, "tag");
+                }}
+                name="tag"
+                value={values.tag}
+                tags={this.state.value.tags}
+              />
             </Form.Group>
             <Form.Group className="submit">
               <Button variant="primary" type="submit" className="btn">

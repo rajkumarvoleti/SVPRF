@@ -5,6 +5,12 @@
   align-items: center;
   justify-content: center;
 }
+.error {
+  position: absolute;
+  color: red;
+  top: 80px;
+  font-size: 15px !important;
+}
 .Join_Us .join_head{
   color: $dark-blue;
   margin: 2rem;
@@ -22,6 +28,7 @@
   }
 }
 .Join_Us>*{
+  position: relative;
   display: flex;
   grid-column: span 1;
   .resume{
