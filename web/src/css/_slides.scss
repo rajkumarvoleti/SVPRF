@@ -9,7 +9,10 @@
     width: auto;
     overflow: hidden;
     display: none;
-  
+    img{
+      object-position:center;
+      object-fit: cover;
+    }
   }
   .active{
     display: flex;

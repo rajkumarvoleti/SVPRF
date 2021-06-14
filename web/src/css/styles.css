@@ -252,15 +252,16 @@ p, label {
 .Navbar {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
   background: #101010;
   z-index: 2;
   width: 100%;
+  opacity: 80%;
 }
 
 .Navbar .Brand {
-  color: #1A74E2;
+  color: whitesmoke;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,7 +274,7 @@ p, label {
 .Navbar .Brand img {
   padding: 0;
   margin: 0;
-  width: 80px;
+  width: 150px;
   height: auto;
 }
 
@@ -290,7 +291,7 @@ p, label {
 }
 
 .Navbar .links .link {
-  color: #1A74E2;
+  color: whitesmoke !important;
 }
 
 @media (max-width: 750px) {
@@ -313,17 +314,29 @@ p, label {
   display: none;
 }
 
+.slides .item img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .slides .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.headMain {
+  height: 100%;
+  position: relative;
+  top: 25vh;
+}
+
 .head {
   position: absolute;
   z-index: 2;
   width: 40%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,6 +357,12 @@ p, label {
   text-shadow: 0px 0px 5px #101010;
   font-size: 8vh;
   font-family: "Merriweather", serif;
+}
+
+@media (max-width: 750px) {
+  .head h3 {
+    font-size: 8vw;
+  }
 }
 
 .head .btn {
@@ -422,9 +441,8 @@ p, label {
 }
 
 .about .photo {
-  height: 20rem;
-  background: url("https://source.unsplash.com/collection/190725/1600x900");
-  background-position: center;
+  width: 90%;
+  height: auto;
 }
 
 .about .content {
@@ -453,8 +471,11 @@ p, label {
   margin-top: 5rem !important;
 }
 
-.about_us.career .about .photo {
-  background: url("https://source.unsplash.com/collection/190723/1600x900");
+@media (max-width: 750px) {
+  .about_us.career .about .content {
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+  }
 }
 
 .icon img {
@@ -462,7 +483,21 @@ p, label {
   height: auto;
 }
 
+.servicesMain {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .services {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,6 +505,8 @@ p, label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  top: 120vh;
 }
 
 .services .head {
@@ -482,8 +519,9 @@ p, label {
 
 .services .head h2 {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   text-shadow: none;
+  color: #1A74E2;
 }
 
 .services .icons {
@@ -796,7 +834,7 @@ p, label {
 
 .CareerPageMain {
   position: relative;
-  top: 40rem;
+  top: 120vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -850,6 +888,18 @@ p, label {
   list-style-type: decimal;
 }
 
+.JoinUsMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .Join_Us {
   display: -ms-grid;
   display: grid;
@@ -862,6 +912,8 @@ p, label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  top: 120vh;
 }
 
 .error {

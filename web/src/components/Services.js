@@ -1,19 +1,19 @@
 import React from "react";
 
 const source = [
-  "survey.webp",
-  "cavassing.webp",
-  "war_room.png",
-  "campaign.png",
-  "polls.webp",
-  "exit_polls.png",
-  "software.png",
-  "social.webp",
-  "digital.png",
-  "booth.webp",
-  "vadvartisement.png",
-  "strategy.webp",
-  "survey2.png",
+  "services/survey.webp",
+  "services/cavassing.webp",
+  "services/war_room.png",
+  "services/campaign.png",
+  "services/polls.webp",
+  "services/exit_polls.png",
+  "services/software.png",
+  "services/social.webp",
+  "services/digital.png",
+  "services/booth.webp",
+  "services/vadvartisement.png",
+  "services/strategy.webp",
+  "services/survey2.png",
 ];
 
 const content = [
@@ -43,19 +43,28 @@ for (let i = 0; i < content.length; i++) {
 }
 
 class Services extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, window.innerHeight - 100);
+  }
+  componentDidUpdate() {
+    const page = this.props.page;
+    if (page !== "/services") this.props.history.push(page);
+  }
   render() {
     return (
-      <div className="services" id="Services">
-        <div className="head">
-          <h2>Services</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut
-            placeat possimus natus dolorum autem maiores beatae consectetur,
-            veniam tempore aperiam nisi omnis ipsum voluptas, doloribus nam
-            voluptates tenetur nulla.
-          </p>
+      <div className="servicesMain">
+        <div className="services" id="Services">
+          <div className="head">
+            <h2>Services</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut
+              placeat possimus natus dolorum autem maiores beatae consectetur,
+              veniam tempore aperiam nisi omnis ipsum voluptas, doloribus nam
+              voluptates tenetur nulla.
+            </p>
+          </div>
+          <div className="icons">{icons}</div>
         </div>
-        <div className="icons">{icons}</div>
       </div>
     );
   }

@@ -1,6 +1,13 @@
 import React from "react";
 
 class AboutUsPage extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, window.innerHeight - 100);
+  }
+  componentDidUpdate() {
+    const page = this.props.page;
+    if (page !== "/about") this.props.history.push(page);
+  }
   render() {
     return (
       <div className="AboutUsPageMain" id="AboutPage">

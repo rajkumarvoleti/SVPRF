@@ -1,4 +1,5 @@
 import React from "react";
+import base from "../base";
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -19,7 +20,22 @@ class ContactForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
   }
-
+  componentDidUpdate() {
+    const isValid = this.state.formValid;
+    if (isValid) {
+      const form_Id = this.state.name + Date.now() + "msg";
+      const values = {
+        name: this.state.name,
+        contact: this.state.contact,
+        email: this.state.email,
+        message: this.state.message,
+      };
+      console.log(form_Id);
+      base.post(form_Id, {
+        data: values,
+      });
+    }
+  }
   isValidEmail(email) {
     // eslint-disable-next-line no-useless-escape
     return email.length > 0;
@@ -32,9 +48,7 @@ class ContactForm extends React.Component {
   handleBlur(e) {
     const name = e.target.name;
     const value = e.target.value;
-
     this.setState({ [name]: value });
-
     if (value.length <= 0 && name === "name") {
       this.setState({ nameError: true });
     } else {

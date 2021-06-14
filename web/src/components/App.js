@@ -1,8 +1,24 @@
 import React from "react";
-import Router2 from "./Router2";
+import TopContainer from "./TopContainer";
+import BottomContainer from "./BottomContainer";
+import Router from "./router";
 class App extends React.Component {
+  state = {
+    page: "/",
+  };
+  changePage = (str) => {
+    var page = this.state.page;
+    page = str;
+    this.setState({ page });
+  };
   render() {
-    return <Router2 />;
+    return (
+      <div className="main">
+        <TopContainer changePage={this.changePage} />
+        <Router page={this.state.page} changePage={this.changePage} />
+        <BottomContainer />
+      </div>
+    );
   }
 }
 

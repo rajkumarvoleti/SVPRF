@@ -1,9 +1,16 @@
+.JoinUsMain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Join_Us{
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80%;
   align-items: center;
   justify-content: center;
+  position: relative;
+  top: 120vh;
 }
 .error {
   position: absolute;

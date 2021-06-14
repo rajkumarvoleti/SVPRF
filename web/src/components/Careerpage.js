@@ -1,6 +1,12 @@
 import React from "react";
-import JoinUs from "./JoinUs";
 class Careerpage extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, window.innerHeight - 100);
+  }
+  componentDidUpdate() {
+    const page = this.props.page;
+    if (page !== "/career") this.props.history.push(page);
+  }
   render() {
     return (
       <div className="CareerPageMain" id="CareerPage">
@@ -37,7 +43,6 @@ class Careerpage extends React.Component {
             </ul>
           </div>
         </div>
-        <JoinUs />
       </div>
     );
   }

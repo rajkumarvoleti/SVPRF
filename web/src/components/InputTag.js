@@ -34,16 +34,6 @@ class InputTag extends React.Component {
       this.props.getTags(this.state.tags);
     }
   }
-  // handleDrag(tag, currPos, newPos) {
-  //   const tags = [...this.state.tags];
-  //   const newTags = tags.slice();
-
-  //   newTags.splice(currPos, 1);
-  //   newTags.splice(newPos, 0, tag);
-
-  //   // re-render
-  //   this.setState({ tags: newTags });
-  // }
 
   render() {
     const { tags, suggestions } = this.state;

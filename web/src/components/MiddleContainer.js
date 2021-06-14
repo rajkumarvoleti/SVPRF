@@ -1,25 +1,22 @@
 import React from "react";
 import Welcome from "./Welcome";
 import AboutUs from "./AboutUs";
-import Services from "./Services";
 import Career from "./Career";
 
 class MiddleContainer extends React.Component {
-  componentDidUpdate() {
+  componentDidMount() {
     window.scrollTo(0, 0);
   }
-  changePage = (str) => {
-    this.props.history.push(`/${str}`);
-    window.scrollTo(0, 1200);
-    this.props.changeNav(str);
-  };
+  componentDidUpdate() {
+    const page = this.props.page;
+    if (page !== "/home" && page !== "/") this.props.history.push(page);
+  }
   render() {
     return (
       <div className="middle-container">
         <Welcome />
-        <AboutUs changePage={this.changePage} />
-        <Services />
-        <Career changePage={this.changePage} />
+        <AboutUs changePage={this.props.changePage} />
+        <Career changePage={this.props.changePage} />
       </div>
     );
   }
