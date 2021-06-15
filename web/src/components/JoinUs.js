@@ -26,13 +26,24 @@ class JoinUs extends React.Component {
       form_value: [],
     };
   }
+  nameRef = React.createRef();
   componentDidMount() {
     window.scrollTo(0, window.innerHeight - 75);
+    const nameRef = this.nameRef;
+    const length = nameRef.current.value.length;
+    nameRef.current.focus();
+    if (length) nameRef.setSelectionRange(length, length);
   }
   componentDidUpdate() {
+    const nameRef = this.nameRef;
+    console.log(nameRef);
+    const length = nameRef.current.value.length;
+    nameRef.current.focus();
+    if (length) nameRef.setSelectionRange(length, length);
     const page = this.props.page;
     if (page !== "/join_us") this.props.history.push(page);
   }
+
   getTags = (obj) => {
     var value = { ...this.state.value };
     value.tags = [...obj];
@@ -144,6 +155,7 @@ class JoinUs extends React.Component {
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                   name="name"
+                  ref={this.nameRef}
                   type="text"
                   className={
                     touched.name
@@ -154,6 +166,7 @@ class JoinUs extends React.Component {
                   }
                   placeholder="Enter Name"
                   value={values.name}
+                  autoFocus
                   onChangeCapture={(e) => {
                     this.updateState(e, "name");
                   }}
