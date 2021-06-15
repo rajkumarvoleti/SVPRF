@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import handleViewport from "react-in-viewport";
 
 class Career extends React.Component {
   handleClick = (str) => {
@@ -30,7 +31,9 @@ class Career extends React.Component {
             </Button>
           </div>
           <img
-            className="photo"
+            className={
+              this.props.inView ? "photo animate__slideInRight" : "photo"
+            }
             src="images/illustrations/career.svg"
             alt="services"
           />
@@ -39,5 +42,6 @@ class Career extends React.Component {
     );
   }
 }
+const CareerPort = handleViewport(Career);
 
-export default Career;
+export default CareerPort;

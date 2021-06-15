@@ -16,18 +16,18 @@ class AboutUsPage extends React.Component {
             <h2>About Us</h2>
             <div className="content">
               <p>
-                One of the SPRO’s strength is embedded in their efficient group
-                of individuals coming from dynamic backgrounds all clustered
-                together under a common aim of improving the policy outcomes of
-                the nation.
+                One of the SPVPRF’s strength is embedded in their efficient
+                group of individuals coming from dynamic backgrounds all
+                clustered together under a common aim of improving the policy
+                outcomes of the nation.
               </p>
               <p>
-                SPRO is one of India's leading political consulting firms. In
+                SPVPRF is one of India's leading political consulting firms. In
                 today's world, accurate analysis is just as important as the
                 data gathered through that analysis. A powerful methodology
                 emerges from the combination of these two, which assesses the
                 current situation and aids decision-making by optimizing
-                available resources for the best possible returns. We, a SPRO,
+                available resources for the best possible returns. We, a SPVPRF,
                 are in the business of collecting and analyzing useful and
                 reliable data in order to produce political insights. We use
                 cutting-edge and creative methods to accomplish this. Currently,
@@ -40,7 +40,7 @@ class AboutUsPage extends React.Component {
           <div className="cards">
             <div className="card">
               <div className="heading">
-                <h3>WHO ARE WE</h3>
+                <h3>WHO WE ARE</h3>
               </div>
               <div className="content">
                 <p>
@@ -61,7 +61,7 @@ class AboutUsPage extends React.Component {
               </div>
               <div className="content">
                 <p>
-                  SPRO is a leader in the field of election studies. Our core
+                  SPVPRF is a leader in the field of election studies. Our core
                   values of "integrity and loyalty" to our clients are something
                   we believe in and are proud of. We have been in the political
                   consulting business for a few years and have successfully

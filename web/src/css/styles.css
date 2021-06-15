@@ -351,6 +351,11 @@ p, label {
 }
 
 .head h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   line-height: 1.2;
   color: #1A74E2;
   font-weight: 800;
@@ -442,6 +447,8 @@ p, label {
 
 .about .photo {
   width: 90%;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   height: auto;
 }
 
@@ -533,6 +540,8 @@ p, label {
 }
 
 .services .icons .icon {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -764,6 +773,7 @@ p, label {
 
 .AboutUsPage .intro {
   margin: 2rem 0;
+  text-align: center;
 }
 
 .AboutUsPage .intro h2 {
@@ -872,20 +882,34 @@ p, label {
 }
 
 .CareerPage .content h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "Merriweather Sans", sans-serif;
+  line-height: 1.2;
 }
 
 .CareerPage .content ul {
   margin: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10fr;
+      grid-template-columns: 1fr 10fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .CareerPage .content ul li {
   padding: 10px;
   line-height: 1.5;
   font-family: "Merriweather Sans", sans-serif;
-  font-size: 1rem;
-  list-style-type: decimal;
+  font-size: 1.2rem;
+}
+
+.CareerPage .content ul svg {
+  fill: #1A74E2;
 }
 
 .JoinUsMain {
@@ -898,6 +922,14 @@ p, label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.ThankYou {
+  position: relative;
+  top: 50rem;
+  z-index: 10;
+  color: #1A74E2;
+  font-size: 1.5rem;
 }
 
 .Join_Us {
@@ -914,6 +946,10 @@ p, label {
           justify-content: center;
   position: relative;
   top: 120vh;
+}
+
+.none {
+  display: none;
 }
 
 .error {
@@ -1010,6 +1046,80 @@ input[type=text]:focus, textarea:focus {
     display: -ms-flexbox;
     display: flex;
     grid-column: span 2;
+  }
+}
+
+.lds-ring {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  z-index: 5;
+  width: 90vw;
+  height: 90vh;
+}
+
+.lds-ring.isLoading {
+  display: none;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #1A74E2;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #1A74E2 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=styles.css.map */

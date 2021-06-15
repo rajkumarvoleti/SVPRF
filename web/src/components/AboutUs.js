@@ -1,23 +1,29 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-
+import handleViewport from "react-in-viewport";
 class AboutUs extends React.Component {
+  state = {
+    entered: false,
+  };
   handleClick = (str) => {
     this.props.changePage(str);
   };
+
   render() {
     return (
       <div className="about_us" id="About">
         <div className="about">
           <h2>About</h2>
           <img
-            className="photo"
+            className={
+              this.props.inView ? "photo animate__slideInLeft" : "photo"
+            }
             src="images/illustrations/about.svg"
             alt="about"
           />
           <div className="content">
             <p>
-              SPRO is one of India's leading political consulting firms. In
+              SPVPRF is one of India's leading political consulting firms. In
               today's world, accurate analysis is just as important as the data
               gathered through that analysis. A powerful methodology emerges
               from the combination of these two, which assesses the current
@@ -39,5 +45,6 @@ class AboutUs extends React.Component {
     );
   }
 }
+const AboutUsPort = handleViewport(AboutUs);
 
-export default AboutUs;
+export default AboutUsPort;

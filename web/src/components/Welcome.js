@@ -10,7 +10,7 @@ class Welcome extends React.Component {
         </div>
         <div className="content">
           <p>
-            SPRO has emerged as a leading research and consulting firm engaged
+            SPVPRF has emerged as a leading research and consulting firm engaged
             in survey research, analytics, and campaign in the fields of
             Election, Governance, Politics, Health, and Education, having been
             established in 2021. ... is a world-class research center for

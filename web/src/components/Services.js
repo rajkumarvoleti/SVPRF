@@ -35,7 +35,7 @@ const content = [
 const icons = [];
 for (let i = 0; i < content.length; i++) {
   icons.push(
-    <div className="icon" key={i}>
+    <div className="icon animate__pulse" key={i}>
       <img src={`images/${source[i]}`} alt={source[i]} />
       <p>{content[i]}</p>
     </div>

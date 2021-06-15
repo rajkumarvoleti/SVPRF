@@ -3,6 +3,13 @@
   justify-content: center;
   align-items: center;
 }
+.ThankYou{
+  position: relative;
+  top: 50rem;
+  z-index: 10;
+  color: $dark-blue;
+  font-size: 1.5rem;
+}
 .Join_Us{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,6 +18,9 @@
   justify-content: center;
   position: relative;
   top: 120vh;
+}
+.none{
+  display: none;
 }
 .error {
   position: absolute;

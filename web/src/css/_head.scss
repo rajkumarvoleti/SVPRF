@@ -14,6 +14,8 @@
   justify-content: center;
   left: 15vw;
   h3{
+    display: flex;
+    animation-duration: 2s;
     line-height: 1.2;
     color: $dark-blue;
     font-weight: 800;

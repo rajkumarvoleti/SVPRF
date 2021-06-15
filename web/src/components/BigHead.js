@@ -9,7 +9,9 @@ class BigHead extends React.Component {
     return (
       <div className="headMain">
         <div className="head">
-          <h3>Sri Padha Vallabha Political Research Forum</h3>
+          <h3 className="animate__slideInLeft">
+            Sri Padha Vallabha Political Research Forum
+          </h3>
           <Button className="btn" onClick={this.handleClick} size="lg">
             Join Us
           </Button>

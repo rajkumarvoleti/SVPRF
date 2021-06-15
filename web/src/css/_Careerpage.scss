@@ -6,7 +6,6 @@
   justify-content: center;
   flex-direction: column;
 }
-
 .CareerPage{
   width: 80%;
   .heading{
@@ -23,18 +22,25 @@
   .content{
     position: relative;
     h4{
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-family: $san-serif;
+      line-height: 1.2;
     }
     ul{
       margin: 20px;
+      display: grid;
+      grid-template-columns: 1fr 10fr;
+      justify-content: center;
+      align-items: center;
     }
     ul li{
       padding: 10px;
       line-height: 1.5;
       font-family: $san-serif;
-      font-size: 1rem;
-      list-style-type :decimal;
+      font-size: 1.2rem;
+    }
+    ul svg{
+      fill: $dark-blue;
     }
   }
 }

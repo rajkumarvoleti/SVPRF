@@ -11,6 +11,7 @@ class JoinUs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      submitted: false,
       intern: false,
       value: {
         name: "",
@@ -101,8 +102,8 @@ class JoinUs extends React.Component {
           validationSchema={schema}
           onSubmit={async (values) => {
             await new Promise((resolve) => setTimeout(resolve, 500));
-            this.saveToLocal(values);
-            this.prevent();
+            await this.saveToLocal(values);
+            this.setState({ submitted: true });
           }}
           validator={() => ({})}
           initialValues={{
@@ -121,11 +122,21 @@ class JoinUs extends React.Component {
             handleBlur,
             values,
             touched,
-            isValid,
+            isSubmitting,
             errors,
             setFieldValue,
           }) => (
-            <Form onSubmit={handleSubmit} noValidate className="Join_Us">
+            <Form
+              onSubmit={handleSubmit}
+              noValidate
+              className={this.state.submitted ? "none" : "Join_Us"}
+            >
+              <div className={isSubmitting ? "lds-ring" : "lds-ring isLoading"}>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
               <div className="join_head">
                 <h2>Join Us</h2>
               </div>
@@ -336,6 +347,9 @@ class JoinUs extends React.Component {
             </Form>
           )}
         </Formik>
+        <div className={this.state.submitted ? "ThankYou" : "none"}>
+          <p>Thank You for submitting the form</p>
+        </div>
       </div>
     );
   }
