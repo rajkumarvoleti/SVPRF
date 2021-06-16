@@ -9,8 +9,13 @@
   justify-content:center;
 }
 .AboutUsPage{
-  width: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   .intro{
+    width: 80%;
     margin: 2rem 0;
     text-align: center;
     h2{
@@ -25,31 +30,6 @@
       line-height: 1.5;
       padding: 10px 0;
     }
-  }
-  .cards{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .card{
-    display: flex;
-    position: relative;
-    justify-content: flex-start;
-    width: 450px;
-    height: 500px;
-    background-color: rgba(216, 214, 214, 0.562);
-    margin: 20px;
-    border: 1px solid $black;
-    .heading{
-      position: relative;
-      margin: 20px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-align: center;
-      line-height: 1.2;
-    }
     .content{
       margin: 20px;
       margin-top: 0;
@@ -57,6 +37,54 @@
     }
   }
 }
-.card:last-child{
-  height: auto;
+.cards{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(216, 214, 214, 0.562);
+  padding: 3rem 0;
+  .headings{
+  width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .big,.small{
+      margin: 20px;
+      font-weight: 600;
+    }
+    .big,.small:hover{
+      cursor: pointer;
+    }
+    .big h3{
+      font-size: 2rem;
+      transition: 1s;
+      color: $dark-blue;
+    }
+    .small h3{
+      font-size: 0.75rem;
+      color: $black;
+    }
+  }
+  
+}
+.matter{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: none;
+  width: 80%;
+  .card{
+  background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+  .card .content{
+    animation-duration: 2s;
+  }
+}
+.none{
+  display: none;
 }

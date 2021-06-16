@@ -768,10 +768,24 @@ p, label {
 }
 
 .AboutUsPage {
-  width: 80%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .AboutUsPage .intro {
+  width: 80%;
   margin: 2rem 0;
   text-align: center;
 }
@@ -790,56 +804,97 @@ p, label {
   padding: 10px 0;
 }
 
-.AboutUsPage .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.AboutUsPage .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 450px;
-  height: 500px;
-  background-color: rgba(216, 214, 214, 0.562);
-  margin: 20px;
-  border: 1px solid #101010;
-}
-
-.AboutUsPage .card .heading {
-  position: relative;
-  margin: 20px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.AboutUsPage .card .content {
+.AboutUsPage .intro .content {
   margin: 20px;
   margin-top: 0;
   line-height: 1.2;
 }
 
-.card:last-child {
-  height: auto;
+.cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(216, 214, 214, 0.562);
+  padding: 3rem 0;
+}
+
+.cards .headings {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards .headings .big, .cards .headings .small {
+  margin: 20px;
+  font-weight: 600;
+}
+
+.cards .headings .big, .cards .headings .small:hover {
+  cursor: pointer;
+}
+
+.cards .headings .big h3 {
+  font-size: 2rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: #1A74E2;
+}
+
+.cards .headings .small h3 {
+  font-size: 0.75rem;
+  color: #101010;
+}
+
+.matter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: none;
+  width: 80%;
+}
+
+.matter .card {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.matter .card .content {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.none {
+  display: none;
 }
 
 .CareerPageMain {

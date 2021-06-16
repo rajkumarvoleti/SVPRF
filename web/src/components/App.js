@@ -13,9 +13,15 @@ class App extends React.Component {
     this.setState({ page });
   };
 
-  componentDidMount() {
-    console.log(window.onload);
-  }
+  componentDidMount = () => {
+    window.onpopstate = (e) => {
+      e.preventDefault();
+      this.handleBackButton(e);
+    };
+  };
+  handleBackButton = () => {
+    this.changePage("/");
+  };
   handleLoad = () => {
     setTimeout(() => {
       this.setState({ isLoading: false });

@@ -20,22 +20,18 @@ const Router = (props) => (
         )}
       />
       <Route
-        exact
         path="/about"
         render={(prop) => <AboutUsPage page={props.page} {...prop} />}
       />
       <Route
-        exact
         path="/career"
         render={(prop) => <CareerPage page={props.page} {...prop} />}
       />
       <Route
-        exact
         path="/services"
         render={(prop) => <Services page={props.page} {...prop} />}
       />
       <Route
-        exact
         path="/join_us"
         render={(prop) => <JoinUs page={props.page} {...prop} />}
       />

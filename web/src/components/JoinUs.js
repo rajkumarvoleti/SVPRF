@@ -35,13 +35,11 @@ class JoinUs extends React.Component {
     if (length) nameRef.setSelectionRange(length, length);
   }
   componentDidUpdate() {
-    const nameRef = this.nameRef;
-    console.log(nameRef);
-    const length = nameRef.current.value.length;
-    nameRef.current.focus();
-    if (length) nameRef.setSelectionRange(length, length);
     const page = this.props.page;
     if (page !== "/join_us") this.props.history.push(page);
+    if (this.state.submitted) {
+      window.scrollBy(0, -500);
+    }
   }
 
   getTags = (obj) => {

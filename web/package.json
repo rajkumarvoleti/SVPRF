@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "cardslider": "^1.2.1",
     "firebase": "^8.6.7",
     "formik": "^2.2.9",
     "re-base": "^4.0.0",
