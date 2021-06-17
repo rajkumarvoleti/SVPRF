@@ -13,7 +13,6 @@ const source = [
   "services/booth.webp",
   "services/vadvartisement.png",
   "services/strategy.webp",
-  "services/survey2.png",
 ];
 
 const content = [
@@ -29,7 +28,6 @@ const content = [
   "Comprehensive Research At Booth Level",
   "Political Advertising",
   "Political Campaign Consultants for Strategic Canvassing & More",
-  "Election Survey Agency",
 ];
 
 const icons = [];
@@ -56,12 +54,30 @@ class Services extends React.Component {
         <div className="services" id="Services">
           <div className="head">
             <h2>Services</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut
-              placeat possimus natus dolorum autem maiores beatae consectetur,
-              veniam tempore aperiam nisi omnis ipsum voluptas, doloribus nam
-              voluptates tenetur nulla.
-            </p>
+            <div className="content">
+              <p>
+                Our goal is to provide our customers with hassle-free services.
+                Using a comprehensive management framework, we provide a wide,
+                all-encompassing overview of compiled data to streamline the
+                process of tabulating records
+              </p>
+              <p>
+                A effective election campaign relies heavily on polling and
+                scientific studies. This aids in reliably reflecting on the
+                various aspects of the election. Candidates may use research to
+                better understand the political climate in their districts and
+                make decisions based on that information. ... argues that
+                instead of conducting business behind closed doors, it should
+                reach out to voters at the grassroots level to gather
+                information.
+              </p>
+              <p>
+                Before the election campaign begins, we at our political polling
+                firm carry you the advantages of thorough analysis. One of the
+                most important aspects of the campaigning process is political
+                polling.
+              </p>
+            </div>
           </div>
           <div className="icons">{icons}</div>
         </div>

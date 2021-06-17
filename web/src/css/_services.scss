@@ -29,6 +29,9 @@
     text-shadow: none;
     color: $dark-blue;
   }
+  .head .content p{
+    margin: 10px 0;
+  }
   .icons{
     display: grid;
     grid-template-columns: 1fr 1fr;

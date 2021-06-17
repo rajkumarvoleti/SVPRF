@@ -6,14 +6,14 @@ class Welcome extends React.Component {
       <div className="welcome" id="home">
         <div className="headings">
           <h4>WELCOME</h4>
-          <h2>Sri Padha Research Organisation</h2>
+          <h2>Sri Padha Vallabha Political Research Forum</h2>
         </div>
         <div className="content">
           <p>
             SPVPRF has emerged as a leading research and consulting firm engaged
             in survey research, analytics, and campaign in the fields of
             Election, Governance, Politics, Health, and Education, having been
-            established in 2021. ... is a world-class research center for
+            established in 2021. It is a world-class research center for
             election studies. When it comes to our clients, we believe in
             ‘integrity and loyalty.' Our scientific approach to data collection
             at the grassroots level is conducted through interviews, with

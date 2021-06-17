@@ -65,7 +65,26 @@ class AboutUsPage extends React.Component {
               </p>
             </div>
           </div>
-          <div className="cards">
+          <div className="what">
+            <h2>What We Are</h2>
+            <div className="content">
+              <p>
+                SPVPRF is a leader in the field of election studies. Our core
+                values of "integrity and loyalty" to our clients are something
+                we believe in and are proud of. We have been in the political
+                consulting business for a few years and have successfully
+                assisted our clients in achieving their objectives, winning
+                elections, meeting public expectations, and rising to the top.
+                We help them assess current trends and shape the image of the
+                leader or candidate, as well as the party's position, using
+                scientific methods. We assess political trends using the most
+                up-to-date methods, provide the best platform for developing a
+                brand leadership image, and equip them with the technology to
+                maintain it.
+              </p>
+            </div>
+          </div>
+          <div className="cards none">
             <div className="headings">
               <div
                 className={this.state.who ? "big" : "small"}

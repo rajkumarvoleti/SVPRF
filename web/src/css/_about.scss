@@ -53,3 +53,15 @@
     }
   }
 }
+.what{
+  width: 80%;
+}
+.who,.what{
+  h2{
+    text-align: center;
+    color: $dark-blue;
+  }
+  .content{
+    margin: 20px 0;
+  }
+}
