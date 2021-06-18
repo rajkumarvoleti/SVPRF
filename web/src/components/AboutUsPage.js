@@ -1,9 +1,11 @@
 import React from "react";
+import DirectorsMsg from "./DirectorsMsg";
 class AboutUsPage extends React.Component {
   state = {
     who: true,
     what: false,
     goals: false,
+    director: false,
   };
   whoRef = React.createRef();
   whatRef = React.createRef();
@@ -65,6 +67,12 @@ class AboutUsPage extends React.Component {
               </p>
             </div>
           </div>
+          <DirectorsMsg
+            onEnterViewport={() => {
+              this.setState({ director: true });
+            }}
+            inView={this.state.director}
+          />
           <div className="what">
             <h2>What We Are</h2>
             <div className="content">

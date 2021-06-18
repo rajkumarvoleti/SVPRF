@@ -41,7 +41,20 @@
       }
     }
   }
+  .about_us{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .about > *{
+      margin: 20px;
+    }
+    .about img{
+      animation-duration: 2s;
+    }
+  }
 }
+
 .cards{
   width: 100%;
   display: flex;

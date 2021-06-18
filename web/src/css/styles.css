@@ -510,6 +510,7 @@ p, label {
 }
 
 .who .content, .what .content {
+  text-align: center;
   margin: 20px 0;
 }
 
@@ -846,6 +847,28 @@ p, label {
     font-size: 1rem !important;
     text-align: justify;
   }
+}
+
+.AboutUsPage .about_us {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.AboutUsPage .about_us .about > * {
+  margin: 20px;
+}
+
+.AboutUsPage .about_us .about img {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .cards {
