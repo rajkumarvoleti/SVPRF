@@ -2,6 +2,7 @@ import React from "react";
 import Welcome from "./Welcome";
 import AboutUs from "./AboutUs";
 import Career from "./Career";
+import Slides2 from "./Slides2";
 
 class MiddleContainer extends React.Component {
   state = {
@@ -53,6 +54,8 @@ class MiddleContainer extends React.Component {
           }}
           inView={this.state.career}
         />
+        <h2 className="activities">Our Activities</h2>
+        <Slides2 />
       </div>
     );
   }

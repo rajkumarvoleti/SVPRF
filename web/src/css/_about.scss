@@ -2,7 +2,10 @@
 
 .about_us{
   width: 100%;
-  background-color: rgba(216, 214, 214, 0.562);
+  background: #BBD2C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   margin-top: 15rem;
   margin-bottom: 5rem;
 }
@@ -14,6 +17,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  padding-top: 50px;
   h2{
     margin: 2rem 0;
     grid-column: span 2;
@@ -46,6 +50,10 @@
   }
 }
 .about_us.career{
+  background: #BBD2C5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   margin-top: 5rem !important;
   @media (max-width: 750px){
     .about .content{
@@ -64,5 +72,31 @@
   .content{
     text-align: center;
     margin: 20px 0;
+  }
+}
+.middle-container{
+  .activities{
+    color: $dark-blue;
+    margin-bottom: 4rem;
+  }
+  .slides{
+    position: relative;
+    width: 80%;
+    height: auto;
+    .item {
+      height: 70vh;
+      width: 100%;
+      margin-right: 0;
+    }
+    .item .caption{
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: $serif;
+    }
+    .item img{
+      filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
+      -webkit-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
+      -moz-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
+    }
   }
 }

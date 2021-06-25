@@ -257,6 +257,10 @@ p, label {
   }
 }
 
+body {
+  background-color: #E8F0F2;
+}
+
 .Navbar {
   display: -ms-grid;
   display: grid;
@@ -436,7 +440,12 @@ p, label {
 
 .about_us {
   width: 100%;
-  background-color: rgba(216, 214, 214, 0.562);
+  background: #BBD2C5;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#536976), to(#BBD2C5));
+  background: linear-gradient(to right, #536976, #BBD2C5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin-top: 15rem;
   margin-bottom: 5rem;
 }
@@ -450,6 +459,7 @@ p, label {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   position: relative;
+  padding-top: 50px;
 }
 
 .about h2 {
@@ -490,6 +500,12 @@ p, label {
 }
 
 .about_us.career {
+  background: #BBD2C5;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#536976), to(#BBD2C5));
+  background: linear-gradient(to left, #536976, #BBD2C5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin-top: 5rem !important;
 }
 
@@ -512,6 +528,35 @@ p, label {
 .who .content, .what .content {
   text-align: center;
   margin: 20px 0;
+}
+
+.middle-container .activities {
+  color: #1A74E2;
+  margin-bottom: 4rem;
+}
+
+.middle-container .slides {
+  position: relative;
+  width: 80%;
+  height: auto;
+}
+
+.middle-container .slides .item {
+  height: 70vh;
+  width: 100%;
+  margin-right: 0;
+}
+
+.middle-container .slides .item .caption {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+}
+
+.middle-container .slides .item img {
+  filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
+  -webkit-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
+  -moz-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
 }
 
 .icon img {
@@ -562,6 +607,7 @@ p, label {
 
 .services .head .content p {
   margin: 10px 0;
+  text-align: center;
 }
 
 .services .icons {
@@ -598,7 +644,12 @@ p, label {
 .contact {
   position: relative;
   top: 80rem;
-  background-color: rgba(216, 214, 214, 0.562);
+  background: #BBD2C5;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#536976), to(#BBD2C5));
+  background: linear-gradient(to left, #536976, #BBD2C5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contact .card .card-body > * {

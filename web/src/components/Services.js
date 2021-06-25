@@ -2,7 +2,7 @@ import React from "react";
 
 const source = [
   "services/survey.webp",
-  "services/cavassing.webp",
+  "services/cavassing.png",
   "services/war_room.png",
   "services/campaign.png",
   "services/polls.webp",
