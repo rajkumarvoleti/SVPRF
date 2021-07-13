@@ -3,8 +3,8 @@
 .about_us{
   width: 100%;
   background: #BBD2C5;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to right, #6f828d, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f828d, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   margin-top: 15rem;
   margin-bottom: 5rem;
@@ -51,8 +51,8 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
 }
 .about_us.career{
   background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to left, #6f828d, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #6f828d, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   margin-top: 5rem !important;
   @media (max-width: 750px){
@@ -98,5 +98,13 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
       -webkit-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
       -moz-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
     }
+  }
+}
+
+@media (max-width: 750px){
+  .about_us,.about_us.career{
+    background: -webkit-linear-gradient(to bottom, #6f828d, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #6f828d, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
 }

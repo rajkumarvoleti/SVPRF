@@ -251,9 +251,8 @@ p, label {
 
 @media (max-width: 750px) {
   p {
-    text-align: justify !important;
+    text-align: left !important;
     font-size: 1rem !important;
-    word-break: break-all;
   }
 }
 
@@ -443,8 +442,8 @@ body {
   background: #BBD2C5;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#536976), to(#BBD2C5));
-  background: linear-gradient(to right, #536976, #BBD2C5);
+  background: -webkit-gradient(linear, left top, right top, from(#6f828d), to(#BBD2C5));
+  background: linear-gradient(to right, #6f828d, #BBD2C5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin-top: 15rem;
   margin-bottom: 5rem;
@@ -503,8 +502,8 @@ body {
   background: #BBD2C5;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#536976), to(#BBD2C5));
-  background: linear-gradient(to left, #536976, #BBD2C5);
+  background: -webkit-gradient(linear, right top, left top, from(#6f828d), to(#BBD2C5));
+  background: linear-gradient(to left, #6f828d, #BBD2C5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin-top: 5rem !important;
 }
@@ -557,6 +556,15 @@ body {
   filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
   -webkit-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
   -moz-filter: grayscale(66%) sepia(10%) brightness(93%) hue-rotate(20deg) saturate(175%) contrast(78%);
+}
+
+@media (max-width: 750px) {
+  .about_us, .about_us.career {
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#6f828d), to(#BBD2C5));
+    background: linear-gradient(to bottom, #6f828d, #BBD2C5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 }
 
 .icon img {

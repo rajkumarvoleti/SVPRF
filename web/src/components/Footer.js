@@ -10,14 +10,26 @@ class Footer extends React.Component {
             <p> All rights reserved</p>
           </div>
           <div className="icons" id="icons">
-            <a href="icons">
+            <a
+              href="http://spvro.org/facebook"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <i className="fa fa-facebook fa-lg"></i>
             </a>
-            <a href="#icons">
-              <i className="fa fa-envelope fa-lg"></i>
+            <a
+              href="http://spvro.org/Youtube"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fa fa-youtube fa-lg"></i>
             </a>
-            <a href="icons">
-              <i className="fa fa-twitter fa-lg"></i>
+            <a
+              href="http://spvro.org/instagram"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fa fa-instagram fa-lg"></i>
             </a>
           </div>
         </div>
