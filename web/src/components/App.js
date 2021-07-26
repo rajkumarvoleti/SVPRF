@@ -11,9 +11,12 @@ class App extends React.Component {
     var page = this.state.page;
     page = str;
     this.setState({ page });
+    localStorage.setItem("page", page);
   };
 
   componentDidMount = () => {
+    const page = localStorage.getItem("page");
+    if (page) this.setState({ page });
     window.onpopstate = (e) => {
       e.preventDefault();
       this.handleBackButton(e);

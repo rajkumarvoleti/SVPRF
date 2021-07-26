@@ -6,26 +6,26 @@ class Footer extends React.Component {
       <div className="footer_top">
         <div className="footer">
           <div className="rights">
-            <p>©2020 FairDice Technologies Pvt. Ltd</p>
+            <p>©2021 Sri Padha Vallabha Political Research Forum</p>
             <p> All rights reserved</p>
           </div>
           <div className="icons" id="icons">
             <a
-              href="http://spvro.org/facebook"
+              href="https://www.facebook.com/Sri-Padha-Vallabha-Research-Organisation-106543954948080/"
               rel="noopener noreferrer"
               target="_blank"
             >
               <i className="fa fa-facebook fa-lg"></i>
             </a>
             <a
-              href="http://spvro.org/Youtube"
+              href="https://www.youtube.com/channel/UCG_3Vd0SxI_8N3YJKkmFzSw"
               rel="noopener noreferrer"
               target="_blank"
             >
               <i className="fa fa-youtube fa-lg"></i>
             </a>
             <a
-              href="http://spvro.org/instagram"
+              href="https://www.instagram.com/spvprf/"
               rel="noopener noreferrer"
               target="_blank"
             >

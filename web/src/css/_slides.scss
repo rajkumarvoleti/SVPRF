@@ -2,13 +2,11 @@
 
 .slides{
   width: 100%;
-  position: absolute;
   overflow: hidden;
   .item{
     height: 100vh;
-    width: auto;
+    width: 100vw;
     overflow: hidden;
-    display: none;
     img{
       object-position:center;
       object-fit: cover;
@@ -17,4 +15,12 @@
   .active{
     display: flex;
   }
+}
+
+.carousel-item-left{
+  display: none;
+}
+
+.slides2{
+  margin-bottom: 5rem;
 }

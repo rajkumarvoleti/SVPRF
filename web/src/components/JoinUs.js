@@ -10,6 +10,7 @@ const Id = Date.now();
 class JoinUs extends React.Component {
   constructor(props) {
     super(props);
+    this.internRef = React.createRef();
     this.state = {
       submitted: false,
       intern: false,
@@ -33,6 +34,7 @@ class JoinUs extends React.Component {
     const length = nameRef.current.value.length;
     nameRef.current.focus();
     if (length) nameRef.setSelectionRange(length, length);
+    if (!this.state.intern) this.internRef.current.style.display = "none";
   }
   componentDidUpdate() {
     const page = this.props.page;
@@ -40,6 +42,10 @@ class JoinUs extends React.Component {
     if (this.state.submitted) {
       window.scrollBy(0, -500);
     }
+
+    // disappear
+    if (!this.state.intern) this.internRef.current.style.display = "none";
+    if (this.state.intern) this.internRef.current.style.display = "flex";
   }
 
   getTags = (obj) => {
@@ -279,7 +285,7 @@ class JoinUs extends React.Component {
                   <ErrorMessage name="role" />
                 </p>
               </Form.Group>
-              <Form.Group>
+              <Form.Group ref={this.internRef}>
                 <Form.Label>Intern Category</Form.Label>
                 <select
                   disabled={!this.state.intern}
@@ -359,7 +365,7 @@ class JoinUs extends React.Component {
           )}
         </Formik>
         <div className={this.state.submitted ? "ThankYou" : "none"}>
-          <p>Thank You for submitting the form</p>
+          <p>Thank you for submitting the form</p>
         </div>
       </div>
     );

@@ -171,14 +171,13 @@ body {
 }
 /* Start */
 .middle-container{
-  position: relative;
-  top: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   line-height: 1.5;
+  padding-top: 50px;
 }
 .middle-container>*{
   width: 80%;

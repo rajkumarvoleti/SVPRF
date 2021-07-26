@@ -10,7 +10,7 @@ class Career extends React.Component {
     return (
       <div className="about_us career" id="Career">
         <div className="about">
-          <h2>Career</h2>
+          <h2>Careers</h2>
 
           <div className="content">
             <p>

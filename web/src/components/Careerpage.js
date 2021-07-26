@@ -12,7 +12,7 @@ class Careerpage extends React.Component {
       <div className="CareerPageMain" id="CareerPage">
         <div className="CareerPage">
           <div className="heading">
-            <h2>Career</h2>
+            <h2>Careers</h2>
           </div>
           <div className="content">
             <h4>

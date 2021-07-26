@@ -176,8 +176,6 @@ body {
 
 /* Start */
 .middle-container {
-  position: relative;
-  top: 90vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,6 +191,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   line-height: 1.5;
+  padding-top: 50px;
 }
 
 .middle-container > * {
@@ -314,15 +313,13 @@ body {
 
 .slides {
   width: 100%;
-  position: absolute;
   overflow: hidden;
 }
 
 .slides .item {
   height: 100vh;
-  width: auto;
+  width: 100vw;
   overflow: hidden;
-  display: none;
 }
 
 .slides .item img {
@@ -336,6 +333,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.carousel-item-left {
+  display: none;
+}
+
+.slides2 {
+  margin-bottom: 5rem;
 }
 
 .headMain {
@@ -392,11 +397,6 @@ body {
   background-color: #1A74E2;
 }
 
-.welcome {
-  position: relative;
-  top: 10rem;
-}
-
 .welcome .headings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,8 +445,7 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#6f828d), to(#BBD2C5));
   background: linear-gradient(to right, #6f828d, #BBD2C5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  margin-top: 15rem;
-  margin-bottom: 5rem;
+  margin: 50px;
 }
 
 .about {
@@ -457,7 +456,6 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  position: relative;
   padding-top: 50px;
 }
 
@@ -594,8 +592,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  top: 120vh;
+  padding-top: 50px;
 }
 
 .services .head {
@@ -650,8 +647,6 @@ body {
 }
 
 .contact {
-  position: relative;
-  top: 80rem;
   background: #BBD2C5;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
@@ -674,6 +669,12 @@ body {
   border-radius: 5px;
   grid-column: span 6;
   margin-top: 20px;
+}
+
+.contact .submit p input {
+  text-transform: capitalize !important;
+  font-size: 1rem;
+  color: whitesmoke;
 }
 
 .contact > * {
@@ -700,6 +701,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 0 !important;
 }
 
 .card-header {
@@ -728,6 +730,12 @@ body {
   padding-left: 5px;
 }
 
+.form-group .formEmail {
+  position: relative;
+  top: -5px;
+  padding: 3px;
+}
+
 .form-group > * {
   margin: 10px 0;
 }
@@ -738,6 +746,8 @@ body {
   grid-row: 2/3;
   grid-column: span 6;
   margin-right: 0;
+  position: relative;
+  top: -10px;
 }
 
 .message textarea {
@@ -751,7 +761,7 @@ body {
 }
 
 .message .alert {
-  top: 270px;
+  top: 100px;
 }
 
 .thankyou {
@@ -771,13 +781,14 @@ body {
     grid-column: 4/6;
     grid-row: 1/-1;
   }
+  .message .alert {
+    top: 300px;
+  }
 }
 
 .footer_top {
   width: 100%;
   background-color: #101010 !important;
-  position: relative;
-  top: 79rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,8 +856,6 @@ body {
 }
 
 .AboutUsPageMain {
-  position: relative;
-  top: 50rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1018,8 +1027,6 @@ body {
 }
 
 .CareerPageMain {
-  position: relative;
-  top: 120vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1033,6 +1040,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 25px;
 }
 
 .CareerPage {
@@ -1096,14 +1104,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 25px;
 }
 
 .ThankYou {
-  position: relative;
-  top: 50rem;
   z-index: 10;
   color: #1A74E2;
-  font-size: 1.5rem;
+  margin: 20rem 0;
+}
+
+.ThankYou p {
+  font-size: 5rem;
 }
 
 .Join_Us {
@@ -1118,8 +1129,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  top: 120vh;
 }
 
 .none {

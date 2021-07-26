@@ -134,7 +134,7 @@ class ContactForm extends React.Component {
                 autoComplete="off"
               >
                 <div className="form-group">
-                  <label className="mb-0">
+                  <label>
                     Name<span className="text-danger">*</span>
                   </label>
                   <input
@@ -155,13 +155,13 @@ class ContactForm extends React.Component {
                   )}
                 </div>
                 <div className="form-group">
-                  <label className="mb-0">
+                  <label>
                     Email<span className="text-danger">*</span>
                   </label>
                   <input
                     name="email"
                     type="email"
-                    className="form-control"
+                    className="form-control formEmail"
                     placeholder="Email"
                     value={this.state.email}
                     onChange={this.handleChange}
@@ -183,7 +183,7 @@ class ContactForm extends React.Component {
                   )}
                 </div>
                 <div className="form-group">
-                  <label className="mb-0">Contact Number(Optional)</label>
+                  <label>Contact Number(Optional)</label>
                   <input
                     name="contact"
                     type="text"
@@ -194,7 +194,7 @@ class ContactForm extends React.Component {
                   />
                 </div>
                 <div className="form-group message">
-                  <label className="mb-0">
+                  <label>
                     Message<span className="text-danger">*</span>
                   </label>
                   <textarea
@@ -226,7 +226,6 @@ class ContactForm extends React.Component {
               </form>
             </div>
           </div>
-          <hr />
           <div className="text-center"></div>
         </div>
       );
