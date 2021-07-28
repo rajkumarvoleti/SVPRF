@@ -327,6 +327,8 @@ body {
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .slides .active {
@@ -335,12 +337,19 @@ body {
   display: flex;
 }
 
-.carousel-item-left {
-  display: none;
-}
-
 .slides2 {
   margin-bottom: 5rem;
+}
+
+.slides2 .item img {
+  width: 100%;
+  height: 100%;
+}
+
+.slides2 .carousel-item-left {
+  opacity: 0;
+  -webkit-transition: 100ms;
+  transition: 100ms;
 }
 
 .headMain {
@@ -1024,6 +1033,10 @@ body {
 
 .none {
   display: none;
+}
+
+.what {
+  margin-top: 40px;
 }
 
 .CareerPageMain {

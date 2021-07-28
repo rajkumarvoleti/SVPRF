@@ -16,6 +16,7 @@ class App extends React.Component {
 
   componentDidMount = () => {
     const page = localStorage.getItem("page");
+    localStorage.removeItem("page");
     if (page) this.setState({ page });
     window.onpopstate = (e) => {
       e.preventDefault();
